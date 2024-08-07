@@ -12,6 +12,40 @@ h1 {
     text-shadow: 1px 1px #fff;
 }   
 
+header h3 {
+    margin: 0;
+    text-align: center;
+    color: #7f6f74;
+    text-shadow: 1px 1px #efddddcc;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
 fieldset {
     width: 500px;
     margin: auto;
