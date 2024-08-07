@@ -20,6 +20,8 @@
         $distancia  = $_POST['distancia'];
         $consumo    = $_POST['consumo'];
         $preco      = $_POST['preco'];
+
+        echo "distancia: $distancia<br>Consumo: $consumo<br>Preco: $preco<br>";
         
         $quantosLitros = $distancia / $consumo;
         $despesa       = $quantosLitros * $preco;

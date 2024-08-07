@@ -20,7 +20,6 @@
             <h3 id="idcabelho">  Fundamentos PHP - Lista01 <br>Exercicio 02
             </h3> 
         </header>
-        
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
@@ -31,6 +30,8 @@
                 <li><a href="#contributions">Contribuições</a></li>
             </ul>
         </nav>
+
+
         <form method="post" action="recebe-dados.php">
             <fieldset>
                 <legend> 
@@ -46,20 +47,18 @@
                 <label class = 'alinha'> 
                     Consumo do automovel:   
                 </label>
-                <input type = 'number' min="0" max="10" step="0.1" nome="consumo"> 
+                <input type = 'number' nome="consumo" min="0"  step="0.1" > 
                 <br>
                 
                 <label class = 'alinha'> 
                     Preco do combustivel:   
                 </label>
-                <input type = 'number' min="0" max="10" step="0.1" name="preco"> 
+                <input type = 'number' name="preco" min="0" step="0.1" > 
                 <br>
                 
                 <button> --Executar-- </button>
                 <!-- <button type='button' id="botao"> --Executar-- </button> -->
-                
             </fieldset>
-            
         </form>
     
     </body>
