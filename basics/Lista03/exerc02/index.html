@@ -1,0 +1,85 @@
+<!-- Crie um documento HTML com um cabeçalho <h1> e um paragrafo <p>. Em seguida, elabore um script em JavaScript que acrescente texto a estes elementos -->
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PHP</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="imagex/png" href="../icons/icon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200;1,400&family=Red+Hat+Display:wght@400;500;700&family=Roboto&display=swap"
+    rel="stylesheet">
+
+        
+    </head>
+    <body>
+        <h1 id="idcabelho">  Fundamentos PHP - Lista01 - <br>Exercicio 02
+        </h1> 
+        <form method="post" action="recebe-dados.php">
+            <fieldset>
+                <legend> 
+                    Processando dados viagem Maria
+                </legend>
+
+                <label class = 'alinha'> 
+                    Distancia da viagem (em KM):   
+                </label>
+                <input type = 'number' name="distancia" min="0" step="0.1", autofocus> 
+                <br>
+
+                <label class = 'alinha'> 
+                    Consumo do automovel:   
+                </label>
+                <input type = 'number' min="0" max="10" step="0.1" nome="consumo"> 
+                <br>
+                
+                <label class = 'alinha'> 
+                    Preco do combustivel:   
+                </label>
+                <input type = 'number' min="0" max="10" step="0.1" name="preco"> 
+                <br>
+                
+                <button type='button' id="botao"> --Executar-- </button>
+                
+            </fieldset>
+            
+        </form>
+    
+    </body>
+
+    <footer>
+        <table>
+            <tr> 
+                <td>
+                    <div class="logo">
+                        <img src="../icons/icon36x36.ico" width="30" alt="Logo">
+                    </div>    
+                </td> 
+                <td>
+                    <div class="info">
+                        <div>&copy; 2024 HTML / CSS / JavaScript</div>
+                        <div>Desenvolvido por: Carlos Hayden Junior</div>
+                    </div>
+                </td> 
+                <td>
+                    <div class="icons">
+                        <img src="../icons/icon-html5-48.png" width="20" alt="HTML Icon">
+                    </div>
+                </td> 
+                <td>
+                    <div class="icons">
+                        <img src="../icons/icon-css3-48.ico" width="20" alt="CSS Icon">
+                    </div>
+                </td> 
+                <td>
+                    <div class="icons">
+                        <img src="../icons/icons8-js-48.png" width="20" alt="JS Icon">
+                    </div>
+                </td> 
+            </tr>
+        </table>
+    </footer> 
+    
+    </html>
