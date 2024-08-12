@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JavaScript</title>
+        <title>PHP</title>
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" type="imagex/png" href="/web/icons/icon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200;1,400&family=Red+Hat+Display:wght@400;500;700&family=Roboto&display=swap"
@@ -13,7 +13,7 @@
         
     </head>
     <body>
-        <h1 id="idcabelho">  Fundamentos do PHP - Lista03 - Exercicio 02 - resposta do servidor</h1>
+        <h1 id="idcabelho">  Fundamentos do PHP - Lista03 - Exercicio 03 - resposta do servidor</h1>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
@@ -24,17 +24,21 @@
 
         <?php
         //recebendo dados de formularios e armazenando em variaveis
-        $distancia  = $_POST['distancia'];
-        $consumo    = $_POST['consumo'];
-        $preco      = $_POST['preco'];
-        
-        $quantosLitros = $distancia / $consumo;
-        $despesa       = $quantosLitros * $preco;
-
-        echo "<p> Resultado do processamento da viagem:<br>
-                Litros de combustivel gastos na viagem: <span>$quantosLitros</span> L<br>
-                Gasto em dinheiro: R$<span>$despesa</span>
-                </p>";
+        if (isset($_GET['valor'])) {
+            $valorVenda = floatval($_GET['valor']);
+            
+            // Calculando os valores
+            $desconto = $valorVenda * 0.10;
+            $icms = $valorVenda * 0.12;
+            $comissao = $valorVenda * 0.05;
+    
+            // Exibindo os resultados
+            echo "<h3>Resultados:</h3>";
+            echo "<p>Desconto concedido ao cliente: R$ " . number_format($desconto, 2, ',', '.') . "<br>";
+            echo "ICMS pago pela loja: R$ " . number_format($icms, 2, ',', '.') . "<br>";
+            echo "Comissão do vendedor: R$ " . number_format($comissao, 2, ',', '.') . "<br></p>";
+        }
+    
     ?>
         
     </body>
