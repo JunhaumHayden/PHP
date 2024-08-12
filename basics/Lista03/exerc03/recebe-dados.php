@@ -24,8 +24,8 @@
 
         <?php
         //recebendo dados de formularios e armazenando em variaveis
-        if (isset($_GET['valor'])) {
-            $valorVenda = floatval($_GET['valor']);
+        if (isset($_GET['valorVenda'])) {
+            $valorVenda = floatval($_GET['valorVenda']);
             
             // Calculando os valores
             $desconto = $valorVenda * 0.10;
