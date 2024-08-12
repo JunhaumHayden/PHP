@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -13,30 +12,52 @@
         
     </head>
     <body>
-        <h1 id="idcabelho">  Fundamentos do PHP - Lista03 - Exercicio 02 - resposta do servidor</h1>
+        <header>
+            <h2>🌐 PHP WebCode Development Wonderland 🐘</h2>
+            <h3 id="idcabelho">  Fundamentos PHP - Lista03 <br>Exercicio 03
+            </h3> 
+        </header>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
-                <li><a href="./index.html">Voltar</a></li>
-                
+
+                <li><a href="/web/index.html">Inicio02</a></li>
+                <li><a href="#tutorials">Tutoriais</a></li>
+                <li><a href="#highlights">Destaques</a></li>
+                <li><a href="#contributions">Contribuições</a></li>
             </ul>
         </nav>
 
-        <?php
-        //recebendo dados de formularios e armazenando em variaveis
-        $distancia  = $_POST['distancia'];
-        $consumo    = $_POST['consumo'];
-        $preco      = $_POST['preco'];
-        
-        $quantosLitros = $distancia / $consumo;
-        $despesa       = $quantosLitros * $preco;
 
-        echo "<p> Resultado do processamento da viagem:<br>
-                Litros de combustivel gastos na viagem: <span>$quantosLitros</span> L<br>
-                Gasto em dinheiro: R$<span>$despesa</span>
-                </p>";
-    ?>
-        
+        <form method="get" action="recebe-dados.php">
+            <fieldset>
+                <legend> 
+                    Calculo de Venda
+                </legend>
+
+                <label class = 'alinha'> 
+                    Informe o valor da venda:   
+                </label>
+                <input type = 'number' name="valorVenda" min="0" step="0.1", autofocus> 
+                <br>
+
+                <!-- <label class = 'alinha'> 
+                    Consumo do automovel:   
+                </label>
+                <input type = 'number' name="consumo" min="0"  step="0.1" > 
+                <br>
+                
+                <label class = 'alinha'> 
+                    Preco do combustivel:   
+                </label>
+                <input type = 'number' name="preco" min="0" step="0.1" > 
+                <br> -->
+                
+                <button> --Executar-- </button>
+              
+            </fieldset>
+        </form>
+    
     </body>
 
     <footer>
@@ -73,5 +94,3 @@
     </footer> 
     
     </html>
-    
-   
