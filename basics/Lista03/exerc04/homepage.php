@@ -11,24 +11,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     
-      <style type="text/css">
-            .linha {
-                font-weight: bold;
-                color: green;
-                padding-left: 10px;
-                line-height: 30px;
-            }
-      </style> 
-      <style type="text/css">
-            .section {
-                font-weight: bold;
-                color: gray;
-                padding-left: 10px;
-                line-height: 30px;
-            }
-      </style>
-
-    <script>
+    <script src="06_exerc.js"></script>
+    <!-- <script>
       $( function() 
       {
         var icons = 
@@ -49,7 +33,7 @@
           }
         });
       });
-    </script>
+    </script> -->
     </head>
 
     <body>
@@ -71,13 +55,7 @@
   
     <h1 id="idcabelho">  My page jQuery UI Accordion - Customize icons<br> Resposta do Servidor</h1>
     
-    <?php
-      for ($i=0; $i < 5 ; $i++) { 
-          print ( "<span class=\"linha\">Linha Número " .$i . "</span><br />");
-        } 
-    ?>
-  
-    <div id="accordion">
+        <div id="accordion">
      <h3><span class="section">Processando Notas de Aluno</span></h3>
         <div>
         <form method="post" action="../exerc01/recebe-dados.php">
@@ -227,12 +205,12 @@
         </table>
     </footer> 
 
-    <-- <script type="text/javascript"> 
-    <--    $(document).ready(function () {
-    <--        alert("Woooohoooo!!");
+     <script type="text/javascript"> 
+        $(document).ready(function () {
+            alert("Woooohoooo!!");
         
-    <--    });
-    <-- </script>
+    });
+    </script>
 
 </html>
 
