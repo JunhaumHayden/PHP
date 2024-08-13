@@ -12,28 +12,7 @@
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     
     <script src="script.js"></script>
-    <!-- <script>
-      $( function() 
-      {
-        var icons = 
-        {
-          header: "ui-icon-circle-arrow-e",
-          activeHeader: "ui-icon-circle-arrow-s"
-        };
-        $( "#accordion" ).accordion({
-          icons: icons
-        });
-        $( "#toggle" ).button().on( "click", function() 
-        {
-          if ( $( "#accordion" ).accordion( "option", "icons" ) ) 
-          {
-            $( "#accordion" ).accordion( "option", "icons", null );
-          } else {
-            $( "#accordion" ).accordion( "option", "icons", icons );
-          }
-        });
-      });
-    </script> -->
+    
     </head>
 
     <body>
@@ -46,7 +25,7 @@
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
 
-                <li><a href="opt02.html">Teste a opção 02</a></li>
+                <li><a href="index.html">Voltar</a></li>
                 <li><a href="#tutorials">Tutoriais</a></li>
                 <li><a href="#highlights">Destaques</a></li>
                 <li><a href="#contributions">Contribuições</a></li>
