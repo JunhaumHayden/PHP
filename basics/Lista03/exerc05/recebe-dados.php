@@ -32,9 +32,8 @@
                 $reais = $dolares * TAXA_CAMBIO;
         
                 // Exibindo os resultados
-                echo "<p>";
                 echo "<h3>Resultado da Conversão:</h3>";
-                echo "Valor em Reais (BRL): R$ " . number_format($reais, 2, ',', '.') . "<br>";
+                echo "<p>Valor em Reais (BRL): R$ " . number_format($reais, 2, ',', '.') . "<br>";
                 echo "Taxa de câmbio utilizada: " . number_format(TAXA_CAMBIO, 2, ',', '.') . " BRL por USD</p>";
             }
     ?>

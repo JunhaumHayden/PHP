@@ -26,17 +26,25 @@
         //recebendo dados de formularios e armazenando em variaveis
         if (isset($_GET['valorVenda'])) {
             $valorVenda = floatval($_GET['valorVenda']);
+            //Definindo Constantes em PHP
+            define('DESCONTO', 10/100);
+            define('ICMS', 12/100);
+            define('COMISSAO', 5/100);
             
             // Calculando os valores
-            $desconto = $valorVenda * 0.10;
-            $icms = $valorVenda * 0.12;
-            $comissao = $valorVenda * 0.05;
+            $desconto = $valorVenda * DESCONTO;
+            $icms = $valorVenda * ICMS;
+            $comissao = $valorVenda * COMISSAO;
     
             // Exibindo os resultados
+            // Após usar a mascara de formatação será devolvido uma String e não um numero. Por isso, é feita apenas quando não precisamos utilizar as variaveis formatadas para calculos numeros. A formatacao deve ser feita antes de enviar ao cliente.
             echo "<h3>Resultados:</h3>";
+            echo "<p>Valor Total da Compra: R$ " . number_format($valorVenda, 2, ',', '.') . "<br>";
             echo "<p>Desconto concedido ao cliente: R$ " . number_format($desconto, 2, ',', '.') . "<br>";
+            echo "Percentual de Desconto ao cliente: <span>" . DESCONTO . "</span><br>";
             echo "ICMS pago pela loja: R$ " . number_format($icms, 2, ',', '.') . "<br>";
             echo "Comissão do vendedor: R$ " . number_format($comissao, 2, ',', '.') . "<br></p>";
+            
         }
     
     ?>
