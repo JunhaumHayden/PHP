@@ -82,6 +82,11 @@ button {
     /* elementos inline não aceitam paramentros auto. pois ocupam o espaço necessario para renderizar. Elementos inblock usam a largura da tabela */
 }
 
+.lamp{
+    margin-top: 20px;
+    background-color:cornsilk;
+}
+
 p {
     border: 1px solid #00000000;
     width: 60%;
