@@ -133,11 +133,11 @@
         <form method="get" action="recebe-dados.php">
             <fieldset>
                 <legend> 
-                    Temperatura em Fahrenheit:
+                Conversor de Fahrenheit para Celsius
                 </legend>
 
                 <label class = 'alinha'> 
-                    Informe o valor da venda:   
+                Temperatura em Fahrenheit:   
                 </label>
                 <input type = 'number' name="fahrenheit" min="0" step="0.01", autofocus> 
                 <br>

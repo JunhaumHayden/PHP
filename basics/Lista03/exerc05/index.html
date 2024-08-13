@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -13,30 +12,40 @@
         
     </head>
     <body>
-        <h1 id="idcabelho">  Fundamentos do PHP - Lista03 - Exercicio 04 - resposta do servidor</h1>
+        <header>
+            <h2>🌐 PHP WebCode Development Wonderland 🐘</h2>
+            <h3 id="idcabelho">  Fundamentos PHP - Lista03 <br>Exercicio 05
+            </h3> 
+        </header>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
-                <li><a href="./index.html">Voltar</a></li>
-                
+
+                <li><a href="/web/index.html">Voltar</a></li>
+                <li><a href="#tutorials">Tutoriais</a></li>
+                <li><a href="#highlights">Destaques</a></li>
+                <li><a href="#contributions">Contribuições</a></li>
             </ul>
         </nav>
 
-        <?php
-        //recebendo dados de formularios e armazenando em variaveis
-        if (isset($_GET['fahrenheit'])) {
-            $fahrenheit = floatval($_GET['fahrenheit']);
-        
-            // Convertendo Fahrenheit para Celsius
-            $celsius = ($fahrenheit - 32) * (5 / 9);
+
+        <form method="post" action="recebe-dados.php">
+            <fieldset>
+                <legend> 
+                    Conversor de Dólares para Reais
+                </legend>
+
+                <label class = 'alinha'> 
+                    Valor em Dólares (USD):   
+                </label>
+                <input type = 'number' name="dolares" min="0" step="0.01", autofocus> 
+                <br>
+                
+                <button> --Executar-- </button>
+              
+            </fieldset>
+        </form>
     
-            // Exibindo o resultado
-            echo "<h3>Resultado:</h3>";
-            echo "<p>A temperatura em Celsius é: " . number_format($celsius, 2, ',', '.') . "°C</p>";
-        }
-    
-        ?>
-        
     </body>
 
     <footer>
@@ -73,5 +82,3 @@
     </footer> 
     
     </html>
-    
-   

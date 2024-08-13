@@ -21,21 +21,23 @@
                 
             </ul>
         </nav>
-
         <?php
-        //recebendo dados de formularios e armazenando em variaveis
-        if (isset($_GET['fahrenheit'])) {
-            $fahrenheit = floatval($_GET['fahrenheit']);
+            // Definindo a taxa de câmbio como uma constante
+            define('TAXA_CAMBIO', 5.20); // Exemplo: 1 USD = 5,20 BRL
+            //recebendo dados de formularios e armazenando em variaveis
+            if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['dolares'])) {
+                $dolares = floatval($_POST['dolares']);
+                
+                // Convertendo dólares para reais
+                $reais = $dolares * TAXA_CAMBIO;
         
-            // Convertendo Fahrenheit para Celsius
-            $celsius = ($fahrenheit - 32) * (5 / 9);
-    
-            // Exibindo o resultado
-            echo "<h3>Resultado:</h3>";
-            echo "<p>A temperatura em Celsius é: " . number_format($celsius, 2, ',', '.') . "°C</p>";
-        }
-    
-        ?>
+                // Exibindo os resultados
+                echo "<p>";
+                echo "<h3>Resultado da Conversão:</h3>";
+                echo "Valor em Reais (BRL): R$ " . number_format($reais, 2, ',', '.') . "<br>";
+                echo "Taxa de câmbio utilizada: " . number_format(TAXA_CAMBIO, 2, ',', '.') . " BRL por USD</p>";
+            }
+    ?>
         
     </body>
 
