@@ -170,7 +170,7 @@
         </div>
     
   
-      <button id="toggle">Toggle icons</button>
+      <button id="toggle" class="btn">Toggle icons</button>
   </body>
   <footer>
         <table>
@@ -204,13 +204,6 @@
             </tr>
         </table>
     </footer> 
-
-     <script type="text/javascript"> 
-        $(document).ready(function () {
-            alert("Woooohoooo!!");
-        
-    });
-    </script>
 
 </html>
 

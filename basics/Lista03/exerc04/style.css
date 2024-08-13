@@ -60,6 +60,13 @@ input[id="Aluno"]{
     width: 60%;
 }
 
+.section {
+    font-weight: bold;
+    color: gray;
+    padding-left: 10px;
+    line-height: 30px;
+}
+
 button {
     height: 40%;
     width: 40%;
@@ -80,11 +87,6 @@ button {
     margin-top: 20px;
     display: block; /* necessário pq o button é um elemento inline */
     /* elementos inline não aceitam paramentros auto. pois ocupam o espaço necessario para renderizar. Elementos inblock usam a largura da tabela */
-}
-
-.lamp{
-    margin-top: 20px;
-    background-color:cornsilk;
 }
 
 p {
