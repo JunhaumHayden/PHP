@@ -48,7 +48,12 @@
             echo "Solicitado Entrega <span>" . $entrega_domicilio .  "</span><br>";
             echo "Valor Total R$ " . number_format($valor_compra, 2, ',', '.') . "<br>";
             ;
-            
+        }
+        else{
+            exit("<p> ERRO! : A valor não informado<br>Programa será encerrado.</p><br>
+                <form action= './index.html' method= 'post'>
+                <button> Retornar ao formulario </button>
+                </form>");
         }
     ?>
         
