@@ -36,7 +36,7 @@
         if ($ultimos_digitos === $numero_sorteado) {
             echo "<h3><span>Parabéns! Você ganhou o sorteio!</span></h3>";
         } else {
-            echo "<h3>Que pena, você não ganhou desta vez. Tente novamente!</h3>";
+            echo "<h3><span>Que pena, você não ganhou desta vez. Tente novamente!</span></h3>";
         }
     } else {
         echo "<p>Ocorreu um erro. Por favor, tente novamente.</p>";
