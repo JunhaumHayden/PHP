@@ -14,14 +14,14 @@
     <body>
         <header>
             <h2>🌐 PHP WebCode Development Wonderland 🐘</h2>
-            <h3 id="idcabelho">  Fundamentos PHP - Lista03 <br>Exercicio 03
+            <h3 id="idcabelho">  Fundamentos PHP - Lista03 <br>Exercicio 05
             </h3> 
         </header>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
 
-                <li><a href="opt02.html">Teste a opção 02</a></li>
+                <li><a href="/web/index.html">Voltar</a></li>
                 <li><a href="#tutorials">Tutoriais</a></li>
                 <li><a href="#highlights">Destaques</a></li>
                 <li><a href="#contributions">Contribuições</a></li>
@@ -29,7 +29,7 @@
         </nav>
 
 
-        <form method="get" action="recebe-dados.php">
+        <form method="post" action="recebe-dados.php">
             <fieldset>
                 <legend> 
                     Calculo de Venda
@@ -39,6 +39,12 @@
                     Informe o valor da venda:   
                 </label>
                 <input type = 'number' name="valorVenda" min="0" step="0.01", autofocus> 
+                <br>
+
+                <label class = 'alinha'> 
+                    Informe o percentual da comissao do vedendor:   
+                </label>
+                <input type = 'number' name="valorComissao" min="0" step="0.01"> 
                 <br>
                 
                 <button> --Executar-- </button>
