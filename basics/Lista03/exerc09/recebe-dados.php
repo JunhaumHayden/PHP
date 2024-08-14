@@ -55,7 +55,7 @@
                 echo "<h3>Você está apto a participar do sorteio!</h3>";
                 echo '<form method="post" action="sorteio.php">';
                 echo '<input type="hidden" name="valor_compra" value="' . $valor_compra . '">';
-                echo '<button type="submit">Ir para a Página do Sorteio</button>';
+                echo '<button class="btn" type="submit">Ir para a Página do Sorteio</button>';
                 echo '</form>';
             } else {
                 echo "<h3>Você não está apto a participar do sorteio.</h3>";

@@ -28,7 +28,7 @@
             $valor_compra = floatval($_POST['valorVenda']);
             // Em vez de usar botões de rádio, o script verifica se as checkboxes foram marcadas usando isset(). Se uma checkbox foi marcada, a variável correspondente ($pagamento_cartao ou $entrega_domicilio) receberá o valor "sim", caso contrário, será null.
             $pagamento_cartao = isset($_POST['pagamento_cartao']) ? $_POST['pagamento_cartao'] : null;
-            $entrega_domicilio = isset($_POST['entrega_domicilio']) ? $_POST['entrega_domicilio'] : null;
+            $entrega_domicilio = isset($_POST['entrega_domicilio']) ? $_POST['entrega_domicilio'] : 'nao';
             
             
             // Aplicar desconto de 5% se o pagamento for com cartão
