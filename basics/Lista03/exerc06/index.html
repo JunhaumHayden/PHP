@@ -14,7 +14,7 @@
     <body>
         <header>
             <h2>🌐 PHP WebCode Development Wonderland 🐘</h2>
-            <h3 id="idcabelho">  Fundamentos PHP - Lista03 <br>Exercicio 05
+            <h3 id="idcabelho">  Fundamentos PHP - Lista03 <br>Exercicio 07
             </h3> 
         </header>
         <nav>
@@ -32,20 +32,26 @@
         <form method="post" action="recebe-dados.php">
             <fieldset>
                 <legend> 
-                    Calculo de Venda
+                    Calculadora de Compras do Supermercado
                 </legend>
 
                 <label class = 'alinha'> 
-                    Informe o valor da venda:   
+                    Informe o valor Total da Compra (R$):   
                 </label>
                 <input type = 'number' name="valorVenda" min="0" step="0.01", autofocus> 
                 <br>
 
-                <label class = 'alinha'> 
-                    Informe o percentual da comissao do vedendor:   
-                </label>
-                <input type = 'number' name="valorComissao" min="0" step="0.01"> 
-                <br>
+                <label>Pagamento com Cartão:</label><br>
+                <input type="radio" id="cartao_sim" name="pagamento_cartao" value="sim" required>
+                <label for="cartao_sim">Sim</label><br>
+                <input type="radio" id="cartao_nao" name="pagamento_cartao" value="nao">
+                <label for="cartao_nao">Não</label><br><br>
+
+                <label>Entrega Domiciliar:</label><br>
+                <input type="radio" id="entrega_sim" name="entrega_domicilio" value="sim" required>
+                <label for="entrega_sim">Sim</label><br>
+                <input type="radio" id="entrega_nao" name="entrega_domicilio" value="nao">
+                <label for="entrega_nao">Não</label><br><br>
                 
                 <button> --Executar-- </button>
               

@@ -25,20 +25,28 @@
             //recebendo dados de formularios e armazenando em variaveis
         if (isset($_POST['valorVenda'])) {
             $valorVenda = floatval($_POST['valorVenda']);
-            $taxaComissao = floatval($_POST['valorComissao']);
+            $pagamento_cartao = $_POST['pagamento_cartao'];
+            $entrega_domicilio = $_POST['entrega_domicilio'];
             
-            // Calculando os valores
-            $valorComissao = $valorVenda * ($taxaComissao / 100);
-            $valorLoja = $valorVenda - $valorComissao;
-    
+            
+            // Aplicar desconto de 5% se o pagamento for com cartão
+            if ($pagamento_cartao == "sim") {
+                $valor_compra *= 0.95; // 5% de desconto
+            }
+
+             // Aplicar taxa de 2% se houver entrega domiciliar
+            if ($entrega_domicilio == "sim") {
+                $valor_compra *= 1.02; // 2% de taxa de entrega
+            }
+
             // Exibindo os resultados
             // Após usar a mascara de formatação será devolvido uma String e não um numero. Por isso, é feita apenas quando não precisamos utilizar as variaveis formatadas para calculos numeros. A formatacao deve ser feita antes de enviar ao cliente.
             echo "<h3>Resultados:</h3>";
             echo "<p>Valor Total da Compra: R$ " . number_format($valorVenda, 2, ',', '.') . "<br>";
-            echo "<p>Taxa de comissao do vendedor é de: " . number_format($taxaComissao, 2, ',', '.') . "<br>";
-            echo "O valor da comissao do vendedor é de R$ <span>" . number_format($valorComissao, 2, ',', '.') .  "</span><br>";
-            echo "Valor recebido pela loja é de R$ " . number_format($icms, 2, ',', '.') . "<br>";
-            echo "Comissão do vendedor: R$ " . number_format($comissao, 2, ',', '.') . "<br></p>";
+            echo "<p>Pagamento com cartão amigo: " . $pagamento_cartao . "<br>";
+            echo "Solicitado Entrega <span>" . $entrega_domicilio .  "</span><br>";
+            echo "Valor Total R$ " . number_format($valor_compra, 2, ',', '.') . "<br>";
+            ;
             
         }
     ?>

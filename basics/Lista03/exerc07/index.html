@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -13,36 +12,46 @@
         
     </head>
     <body>
-        <h1 id="idcabelho">  Fundamentos do PHP - Lista03 - Exercicio 04 - resposta do servidor</h1>
+        <header>
+            <h2>🌐 PHP WebCode Development Wonderland 🐘</h2>
+            <h3 id="idcabelho">  Fundamentos PHP - Lista03 <br>Exercicio 05
+            </h3> 
+        </header>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
-                <li><a href="./index.html">Voltar</a></li>
-                
+
+                <li><a href="/web/index.html">Voltar</a></li>
+                <li><a href="#tutorials">Tutoriais</a></li>
+                <li><a href="#highlights">Destaques</a></li>
+                <li><a href="#contributions">Contribuições</a></li>
             </ul>
         </nav>
-        <?php
-            //recebendo dados de formularios e armazenando em variaveis
-        if (isset($_POST['valorVenda'])) {
-            $valorVenda = floatval($_POST['valorVenda']);
-            $taxaComissao = floatval($_POST['valorComissao']);
-            
-            // Calculando os valores
-            $valorComissao = $valorVenda * ($taxaComissao / 100);
-            $valorLoja = $valorVenda - $valorComissao;
+
+
+        <form method="post" action="recebe-dados.php">
+            <fieldset>
+                <legend> 
+                    Calculo de Venda
+                </legend>
+
+                <label class = 'alinha'> 
+                    Informe o valor da venda:   
+                </label>
+                <input type = 'number' name="valorVenda" min="0" step="0.01", autofocus> 
+                <br>
+
+                <label class = 'alinha'> 
+                    Informe o percentual da comissao do vedendor:   
+                </label>
+                <input type = 'number' name="valorComissao" min="0" step="0.01"> 
+                <br>
+                
+                <button> --Executar-- </button>
+              
+            </fieldset>
+        </form>
     
-            // Exibindo os resultados
-            // Após usar a mascara de formatação será devolvido uma String e não um numero. Por isso, é feita apenas quando não precisamos utilizar as variaveis formatadas para calculos numeros. A formatacao deve ser feita antes de enviar ao cliente.
-            echo "<h3>Resultados:</h3>";
-            echo "<p>Valor Total da Compra: R$ " . number_format($valorVenda, 2, ',', '.') . "<br>";
-            echo "<p>Taxa de comissao do vendedor é de: " . number_format($taxaComissao, 2, ',', '.') . "<br>";
-            echo "O valor da comissao do vendedor é de R$ <span>" . number_format($valorComissao, 2, ',', '.') .  "</span><br>";
-            echo "Valor recebido pela loja é de R$ " . number_format($icms, 2, ',', '.') . "<br>";
-            echo "Comissão do vendedor: R$ " . number_format($comissao, 2, ',', '.') . "<br></p>";
-            
-        }
-    ?>
-        
     </body>
 
     <footer>
@@ -79,5 +88,3 @@
     </footer> 
     
     </html>
-    
-   
