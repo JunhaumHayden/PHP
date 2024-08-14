@@ -34,7 +34,7 @@
 
         // Comparar os últimos dígitos do valor da compra com o número sorteado
         if ($ultimos_digitos === $numero_sorteado) {
-            echo "<h3>Parabéns! Você ganhou o sorteio!</h3>";
+            echo "<h3><span>Parabéns! Você ganhou o sorteio!</span></h3>";
         } else {
             echo "<h3>Que pena, você não ganhou desta vez. Tente novamente!</h3>";
         }
@@ -43,7 +43,7 @@
     }
     ?>
 
-    <a href="index.php">Voltar</a>
+    <a href="./index.html">Voltar</a>
         
     </body>
 

@@ -110,9 +110,18 @@ p.mostra {
     display: block;
 }
 
+span {
+    background-color: red;
+    color: #fff;
+    font-size: 50px;
+    font-family: Droid;
+
+}
+
 p.naoNumero {
     display: block;
     background-color: red;
+    
 }
 
 
