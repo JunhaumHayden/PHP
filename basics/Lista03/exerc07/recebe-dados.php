@@ -25,6 +25,7 @@
             //recebendo dados de formularios e armazenando em variaveis
         if (isset($_POST['valorVenda'])) {
             $valorVenda = floatval($_POST['valorVenda']);
+            $valor_compra = floatval($_POST['valor_compra']);
             $pagamento_cartao = $_POST['pagamento_cartao'];
             $entrega_domicilio = $_POST['entrega_domicilio'];
             

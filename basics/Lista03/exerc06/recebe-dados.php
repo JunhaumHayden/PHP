@@ -37,8 +37,6 @@
             echo "<p>Valor Total da Compra: R$ " . number_format($valorVenda, 2, ',', '.') . "<br>";
             echo "<p>Taxa de comissao do vendedor é de: " . number_format($taxaComissao, 2, ',', '.') . "<br>";
             echo "O valor da comissao do vendedor é de R$ <span>" . number_format($valorComissao, 2, ',', '.') .  "</span><br>";
-            echo "Valor recebido pela loja é de R$ " . number_format($icms, 2, ',', '.') . "<br>";
-            echo "Comissão do vendedor: R$ " . number_format($comissao, 2, ',', '.') . "<br></p>";
             
         }
     ?>
