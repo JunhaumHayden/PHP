@@ -13,7 +13,7 @@
         
     </head>
     <body>
-        <h1 id="idcabelho">  Fundamentos do PHP - Lista03 - Exercicio 04 - resposta do servidor</h1>
+        <h1 id="idcabelho">  Fundamentos do PHP - Lista03 - Exercicio 07<br> Resposta do Servidor WebCode Development</h1>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
@@ -25,7 +25,7 @@
             //recebendo dados de formularios e armazenando em variaveis
         if (isset($_POST['valorVenda'])) {
             $valorVenda = floatval($_POST['valorVenda']);
-            $valor_compra = floatval($_POST['valor_compra']);
+            $valor_compra = floatval($_POST['valorVenda']);
             $pagamento_cartao = $_POST['pagamento_cartao'];
             $entrega_domicilio = $_POST['entrega_domicilio'];
             

@@ -13,7 +13,7 @@
         
     </head>
     <body>
-        <h1 id="idcabelho">  Fundamentos do PHP - Lista03 - Exercicio 04 - resposta do servidor</h1>
+        <h1 id="idcabelho">  Fundamentos do PHP - Lista03 - Exercicio 06<br> Resposta do Servidor WebCode Development</h1>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
@@ -35,7 +35,7 @@
             // Após usar a mascara de formatação será devolvido uma String e não um numero. Por isso, é feita apenas quando não precisamos utilizar as variaveis formatadas para calculos numeros. A formatacao deve ser feita antes de enviar ao cliente.
             echo "<h3>Resultados:</h3>";
             echo "<p>Valor Total da Compra: R$ " . number_format($valorVenda, 2, ',', '.') . "<br>";
-            echo "<p>Taxa de comissao do vendedor é de: " . number_format($taxaComissao, 2, ',', '.') . "<br>";
+            echo "<p>Taxa de comissao do vendedor é de: " . $taxaComissao . "%<br>";
             echo "O valor da comissao do vendedor é de R$ <span>" . number_format($valorComissao, 2, ',', '.') .  "</span><br>";
             
         }
