@@ -108,10 +108,32 @@ p.mostra {
     display: block;
 }
 
+span {
+    background-color: red;
+    color: #fff;
+    font-size: 50px;
+    font-family: Droid;
+
+}
+
+.blinking-text {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
 p.naoNumero {
     display: block;
     background-color: red;
 }
+
 
 
 footer {
