@@ -135,6 +135,27 @@ p.naoNumero {
     display: block;
     background-color: red;
 }
+/*Formatacao da tabela*/
+td, th{
+    border: 2px groove grey; /* Adiciona uma borda para separar as células */
+    width: 20px; /* Define a largura da célula */
+    height: 20px; /* Define a altura da célula */
+    padding: 10px;
+    text-align: center;   
+}
+
+th {
+    background-color: #f2f2f2;
+  }
+
+table{
+    border-collapse: collapse;
+    margin: auto;   
+    text-align: center;
+    width: 100%; /* Ajusta a largura da tabela */
+    border-collapse: collapse;
+    
+}
 
 
 footer {

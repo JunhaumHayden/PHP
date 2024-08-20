@@ -26,27 +26,18 @@
             //recebendo dados de formularios e armazenando em variaveis e criar o vetor de indice numerico para armazenar as 3 notas
             if (isset($_POST['nome-aluno01'])) 
             {
-                $vetorAlunos = array(
-                    $_POST['nome-aluno01'] => $_POST['nota01'], 
-                    $_POST['nome-aluno02'] => $_POST['nota02'], 
-                    $_POST['nome-aluno03'] => $_POST['nota03']
-                );
-
-                // Modo Formatado
-                echo "<pre>"; // tag para preformatacao em html
-                print_r($vetorAlunos);
-                echo "</p></pre>";
-
+                // Pode-se criar o vetor dessa maneira
+                // $vetorAlunos = array(
+                //     $_POST['nome-aluno01'] => $_POST['nota01'], 
+                //     $_POST['nome-aluno02'] => $_POST['nota02'], 
+                //     $_POST['nome-aluno03'] => $_POST['nota03']
+                // );
+                // Ou dessa maneira
                 $vetorAlunos = [
                     $_POST['nome-aluno01'] => $_POST['nota01'], 
                     $_POST['nome-aluno02'] => $_POST['nota02'], 
                     $_POST['nome-aluno03'] => $_POST['nota03']
                 ];
-
-                // Modo Formatado
-                echo "<pre>"; // tag para preformatacao em html
-                print_r($vetorAlunos);
-                echo "</p></pre>";
             }
 
             echo "<table>
@@ -63,16 +54,6 @@
             }
             echo "</table>";
 
-            // modos de representacao
-            echo "<p> Veja essas outras maneiras de apresentar o vetor em PHP<br>";
-            // Modo bruto
-            print_r($vetorAlunos);
-
-            // Modo Formatado
-            echo "<pre>"; // tag para preformatacao em html
-            print_r($vetorAlunos);
-
-            echo "</p></pre>";
         ?>
         
     </body>

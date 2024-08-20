@@ -29,22 +29,26 @@
             $vetorNotas[1] = $_POST['nota02'];
             $vetorNotas[3] = $_POST['nota03'];
 
-            // Calcular media
-            echo "<p>";
-            foreach($vetorNotas as $x)
-            {
-                echo "Nota do aluno = $x <br>";
-            }
-            echo "</p>";
+            // // Calcular media
+            // echo "<p>";
+            // foreach($vetorNotas as $x)
+            // {
+            //     echo "Nota do aluno = $x <br>";
+            // }
+            // echo "</p>";
 
             $soma = array_sum($vetorNotas);
             $media = $soma/count($vetorNotas);
             
 
-            echo "<p> Notas do Aluno:<br>
+            echo "<p> <h3>Notas do Aluno:</h3><br>
                     Nome do Aluno: $nomeDoAluno<br>
-                    Media onderada: <span>". number_format($media, 1,",",".") . "</span>
-                    </p>";
+                    Media onderada: <span>". number_format($media, 1,",",".") . "</span><br>";
+            foreach($vetorNotas as $x)
+            {
+                echo "Nota do aluno = $x <br>";
+            }
+            echo "</p>";
 
             // modos de representacao
             echo "<p> Veja essas outras maneiras de apresentar o vetor em PHP<br>";
@@ -53,7 +57,8 @@
             // Modo Formatado
             echo "<pre>"; // tag para preformatacao em html
             print_r($vetorNotas);
-            echo "</p></pre>";
+            echo "</pre>";
+            echo "</p>";
         ?>
         
     </body>
