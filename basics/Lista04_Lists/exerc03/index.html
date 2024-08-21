@@ -14,7 +14,7 @@
     <body>
         <header>
             <h2>🌐 PHP WebCode Development Wonderland 🐘</h2>
-            <h3 id="idcabelho">  Tratamento de vetores em PHP - Lista04 <br>Exercicio 02
+            <h3 id="idcabelho">  Tratamento de vetores em PHP - Lista04 <br>Exercicio 03
             </h3> 
         </header>
         <nav>
@@ -29,52 +29,37 @@
         </nav>
 
 
+        
         <form method="post" action="recebe-dados.php">
             <fieldset>
                 <legend> 
-                    Calculadora de Notas de Alunos
+                    Cadastro e Ordenação de Notas dos Alunos
                 </legend>
             
-                        <label class = 'alinha'> 
-                            Nome do Aluno 01:   
-                        </label>
-                        <input type = 'text' name="nome-aluno01", autofocus> 
-                        <br>
-            
-                        <label class = 'alinha'> 
-                            Nota 01:   
-                        </label>
-                        <input type = 'number' name="nota01" min="0"  step="0.1" > 
-                        <br>
+                        <label class = 'alinha'>Nome do Aluno 01:</label>
+                        <input type = 'text' name="nome-aluno01", autofocus required><br>
+                        <label class = 'alinha'>Nota 01:</label>
+                        <input type = 'number' name="nota01" min="0"  step="0.1" required><br>
                         
-                        <label class = 'alinha'> 
-                            Nome do Aluno 02:   
-                        </label>
-                        <input type = 'text' name="nome-aluno02", autofocus> 
-                        <br>
-                        <label class = 'alinha'> 
-                            Nota 02:   
-                        </label>
-                        <input type = 'number' name="nota02" min="0"  step="0.1" > 
-                        <br>
+                        <label class = 'alinha'>Nome do Aluno 02:</label>
+                        <input type = 'text' name="nome-aluno02" required><br>
+                        <label class = 'alinha'>Nota 02:</label>
+                        <input type = 'number' name="nota02" min="0"  step="0.1" required><br>
                         
-                        <label class = 'alinha'> 
-                            Nome do Aluno 03:   
-                        </label>
-                        <input type = 'text' name="nome-aluno03", autofocus> 
-                        <br>
-                        <label class = 'alinha'> 
-                            Nota 03:   
-                        </label>
-                        <input type = 'number' name="nota03" min="0"  step="0.1" > 
+                        <label class = 'alinha'>Nome do Aluno 03:</label>
+                        <input type = 'text' name="nome-aluno03"required><br>
+                        <label class = 'alinha'>Nota 03:</label>
+                        <input type = 'number' name="nota03" min="0"  step="0.1" required> 
                         <br>
                 
                 <button> --Executar-- </button>
               
             </fieldset>
         </form>
-    
     </body>
+
+
+
 
     <footer>
         <table>
