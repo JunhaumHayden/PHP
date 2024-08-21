@@ -37,7 +37,7 @@
         <div id="accordion">
      <h3><span class="section">Conversor de Dólares para Reais</span></h3>
         <div>
-        <form method="post" action="../web/basics/Lista03_SimpleVariables/05_Conversor_Moeda/recebe-dados.php">
+        <form method="post" action="../basics/Lista03_SimpleVariables/05_Conversor_Moeda/recebe-dados.php">
         <fieldset>
                 <legend> 
                     Conversor de Dólares para Reais
@@ -56,7 +56,7 @@
         </div>
      <h3><span class="section">Calcular Despesas de Viagem</span></h3>
           <div>
-          <form method="post" action=".../basics/Lista03_SimpleVariables/02_Calculo_Dados_Viagem/recebe-dados.php">
+          <form method="post" action="../basics/Lista03_SimpleVariables/02_Calculo_Dados_Viagem/recebe-dados.php">
             <fieldset>
                 <legend> 
                     Processando dados viagem
@@ -87,7 +87,7 @@
         </div>
      <h3><span class="section">Calcular Despesas de Supermercado</span></h3>
         <div>
-        <form method="get" action=".../basics/Lista03_SimpleVariables/08_Calcular_Supermercado_v2/recebe-dados.php">
+        <form method="get" action="../basics/Lista03_SimpleVariables/08_Calcular_Supermercado_v2/recebe-dados.php">
             <fieldset>
             <legend> 
                     Calculadora de Compras do Supermercado
@@ -113,7 +113,7 @@
         </div>
       <h3><span class="section">Conversor de Temperatura</span></h3>
         <div>
-        <form method="get" action=".../basics/Lista03_SimpleVariables/04_Conversor_Temperatura/recebe-dados.php">
+        <form method="get" action="../basics/Lista03_SimpleVariables/04_Conversor_Temperatura/recebe-dados.php">
             <fieldset>
                 <legend> 
                 Conversor de Fahrenheit para Celsius
