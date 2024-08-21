@@ -1,11 +1,5 @@
 /* styles.css */
-body {
-    font-family: Oswald, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #8b8989;
-}
+
 
 header {
     background-color: #222;
@@ -13,9 +7,6 @@ header {
     text-align: center;
     border-bottom: 4px solid #ff4081;
 }
-
-/*Formata a sessao de anuncios*/
-
 
 nav ul {
     list-style: none;
@@ -35,17 +26,39 @@ nav ul li a {
     text-decoration: none;
 }
 
+body {
+    font-family: Oswald, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #8b8989;
+}
+
+/* Estilo específico para os links dentro da seção de destaques */
+#highlights a {
+    color: gray; /* Define a cor cinza para os links */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+/* Estilo opcional para mudar a cor dos links quando o usuário passa o mouse */
+#highlights a:hover {
+    color: darkgray; /* Cor cinza escuro ao passar o mouse */
+}
+
+/*A <div class="content-wrapper"> envolve o conteúdo principal e a nova seção de anúncios, utilizando display: flex; para alinhar os elementos lado a lado.*/
 .content-wrapper {
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
-
+/*O main é o conteúdo principal, que ocupa a maior parte do espaço disponível.
+O aside com a classe ad-section é a nova seção de anúncios que ocupa a lateral direita.*/
 main {
     flex: 1;
     margin-right: 20px;
 }
-
+/*Formata a sessao de anuncios
+A .ad-section foi estilizada para ter uma largura fixa de 300px, e um fundo levemente diferente para destacar os anúncios.*/
 .ad-section {
     width: 200px;
     padding: 20px;
@@ -57,7 +70,7 @@ main {
     text-align: center;
     color: #f6f5f5;
 }
-
+/*Cada anúncio dentro da seção de anúncios (.ad) foi estilizado para incluir uma imagem e um texto descritivo abaixo dela.*/
 .ad-section .ad {
     margin-bottom: 20px;
 }
@@ -82,7 +95,7 @@ header h1 {
 section h2 {
     color: #ff4081;
 }
-/*Ultima frase*/
+/*Ultima Paragrafo*/
 p.final {
     background-color: #e4e1e1;
     text-align: center;
