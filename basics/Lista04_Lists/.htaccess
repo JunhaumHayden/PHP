@@ -1,0 +1,5 @@
+Options +Indexes
+IndexOptions FancyIndexing HTMLTable Charset=UTF-8
+HeaderName HEADER.html
+ReadmeName FOOTER.html
+IndexIgnore HEADER.html FOOTER.html
