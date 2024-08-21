@@ -3,7 +3,7 @@ body {
     font-family: Oswald;
 }
 
-h1 {
+h2 {
     margin: 0;
     text-align: center;
     border-bottom: 1px solid #000;
@@ -11,6 +11,16 @@ h1 {
     background-color: rgba(210, 210, 210, 0.4);
     text-shadow: 1px 1px #fff;
 }   
+
+h3 {
+    margin: 0;
+    text-align: center;
+    color: #a9aaac;
+    border-bottom: 1px solid #000;
+    margin-top: 50px;
+    background-color: rgba(17, 7, 213, 0.888);
+    text-shadow: 1px 1px #fff;
+} 
 
 header h3 {
     margin: 0;
@@ -92,16 +102,12 @@ button {
 span {
     background-color: red;
     color: #fff;
-    font-size: 50px;
+    font-size: 20px;
     font-family: Droid;
 
 }
-
+/*Formatacao para o elemento piscar*/
 .blinking-text {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 2px solid #000;
-    border-radius: 15px;
     animation: blink 1s infinite;
 }
 
@@ -138,6 +144,28 @@ p.mostra {
 p.naoNumero {
     display: block;
     background-color: red;
+}
+/*Formatacao da tabela*/
+td, th{
+    border: 2px groove grey; /* Adiciona uma borda para separar as células */
+    width: 20px; /* Define a largura da célula */
+    height: 20px; /* Define a altura da célula */
+    padding: 10px;
+    text-align: center;   
+}
+
+th {
+    background-color: #f2f2f2;
+  }
+
+table{
+    border-collapse: collapse;
+    padding: 40px;
+    margin: auto;   
+    text-align: center;
+    width: 50%; /* Ajusta a largura da tabela */
+    border-collapse: collapse;
+    
 }
 
 

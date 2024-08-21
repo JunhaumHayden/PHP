@@ -18,7 +18,7 @@ h3 {
     color: #a9aaac;
     border-bottom: 1px solid #000;
     margin-top: 50px;
-    background-color: rgba(17, 7, 213, 0.4);
+    background-color: rgba(17, 7, 213, 0.888);
     text-shadow: 1px 1px #fff;
 } 
 
@@ -160,6 +160,7 @@ th {
 
 table{
     border-collapse: collapse;
+    padding: 40px;
     margin: auto;   
     text-align: center;
     width: 50%; /* Ajusta a largura da tabela */
