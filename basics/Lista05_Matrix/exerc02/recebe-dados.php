@@ -83,12 +83,7 @@
         // Mostrar o nome e a nota do aluno com a maior nota
         echo "<script>
         Alert(Meida Geral: ".number_format(media,1,",",".")."<br>Volte Semre!)
-            </script>"
-
-            echo "<pre>";
-            print_r($matrizAlunos);
-            echo "</pre>";
-
+            </script>";
         ?>
         
     </body>
