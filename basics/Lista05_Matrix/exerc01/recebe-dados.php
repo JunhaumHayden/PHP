@@ -65,9 +65,7 @@
                 // ];
             }
 
-            echo "<pre>";
-            print_r($matrizAlunos);
-            echo "</pre>";
+            
             // Mostrar os dados em formato tabular
             echo "<h3>Notas dos Alunos</h3>";
             echo "<table>
@@ -88,6 +86,10 @@
                       </tr>";
             }
             echo "</table>";
+
+            echo "<pre>";
+            print_r($matrizAlunos);
+            echo "</pre>";
 
         ?>
         

@@ -37,11 +37,11 @@
                 $media01 = $_POST['nota-aluno01'];
                 $media02 = $_POST['nota-aluno02'];
                 $media03 = $_POST['nota-aluno03'];
-                
+
                     $matrizAlunos=[
-                        ['$matricula01'] => [$aluno01,$media01],
-                        ['$matricula02'] => [$aluno02,$media02],
-                        ['$matricula03'] => [$aluno03,$media03]
+                        [$matricula01] => [$aluno01,$media01],
+                        [$matricula02] => [$aluno02,$media02],
+                        [$matricula03] => [$aluno03,$media03]
                     ];
 
                 // $matrizAlunos = [
