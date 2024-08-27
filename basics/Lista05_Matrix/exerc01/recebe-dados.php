@@ -38,22 +38,22 @@
                 $media02 = $_POST['nota-aluno02'];
                 $media03 = $_POST['nota-aluno03'];
 
-                $matrizAlunos['$matricula01'][0] = '$aluno01';
-                $matrizAlunos['$matricula01'][1] = '$media01';
-                $matrizAlunos['$matricula02'][0] = '$aluno02';
-                $matrizAlunos['$matricula02'][1] = '$media02';
-                $matrizAlunos['$matricula03'][0] = '$aluno03';
-                $matrizAlunos['$matricula03'][1] = '$media03';
+                $matrizAlunos[$matricula01][0] = $aluno01;
+                $matrizAlunos[$matricula01][1] = $media01;
+                $matrizAlunos[$matricula02][0] = $aluno02;
+                $matrizAlunos[$matricula02][1] = $media02;
+                $matrizAlunos[$matricula03][0] = $aluno03;
+                $matrizAlunos[$matricula03][1] = $media03;
 
 
-                    $matrizAlunos=[
-                        ['$matricula01'][0] => '$aluno01',
-                        ['$matricula01'][1] => '$media01',
-                        ['$matricula02'][0] => '$aluno02',
-                        ['$matricula02'][1] => '$media02',
-                        ['$matricula03'][0] => '$aluno03',
-                        ['$matricula03'][1] => '$media03',
-                    ];
+                    // $matrizAlunos=[
+                    //     ['$matricula01'][0] => '$aluno01',
+                    //     ['$matricula01'][1] => '$media01',
+                    //     ['$matricula02'][0] => '$aluno02',
+                    //     ['$matricula02'][1] => '$media02',
+                    //     ['$matricula03'][0] => '$aluno03',
+                    //     ['$matricula03'][1] => '$media03',
+                    // ];
 
                 // $matrizAlunos = [
                 //     [$_POST['matricula-aluno01']][0] => $_POST['nome-aluno01'],
@@ -88,15 +88,6 @@
                       </tr>";
             }
             echo "</table>";
-
-            // calcular a media geral
-        $nomeMaiorNota = array_keys($vetorAlunos, max($vetorAlunos))[0];
-        $maiorNota = $vetorAlunos[$nomeMaiorNota];
-
-        // Mostrar o nome e a nota do aluno com a maior nota
-        echo "<h3>Aluno com Maior Nota</h3>";
-        echo "<p>Nome: {$nomeMaiorNota}<br>";
-        echo "Nota: {$maiorNota}</p>";
 
         ?>
         

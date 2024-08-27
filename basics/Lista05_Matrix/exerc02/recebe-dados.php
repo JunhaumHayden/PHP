@@ -37,15 +37,7 @@
                 $media01 = $_POST['nota-aluno01'];
                 $media02 = $_POST['nota-aluno02'];
                 $media03 = $_POST['nota-aluno03'];
-
-                $matrizAlunos['$matricula01'][0] = '$aluno01';
-                $matrizAlunos['$matricula01'][1] = '$media01';
-                $matrizAlunos['$matricula02'][0] = '$aluno02';
-                $matrizAlunos['$matricula02'][1] = '$media02';
-                $matrizAlunos['$matricula03'][0] = '$aluno03';
-                $matrizAlunos['$matricula03'][1] = '$media03';
-
-
+                
                     $matrizAlunos=[
                         ['$matricula01'] => [$aluno01,$media01],
                         ['$matricula02'] => [$aluno02,$media02],
