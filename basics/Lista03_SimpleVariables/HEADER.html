@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>My Directory Listing</title>
+    <link rel="stylesheet" href="../assets/css/styleDirectories.css">
+    <link rel="shortcut icon" type="imagex/png" href="./icons/icon.ico">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,14 +63,43 @@
             background-color: #f9f9f9;
         }
         footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.info {
+    text-align: center;
+}
+
+.icons img {
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icons img {
+        margin: 10px 5px;
+    }
+}
+
     </style>
 </head>
 <body>
