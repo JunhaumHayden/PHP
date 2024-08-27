@@ -13,7 +13,7 @@
         
     </head>
     <body>
-        <h2 id="idcabelho">  Tratamento de matrizes em PHP - Lista05 - Exercicio 01<br> <span class="blinking-text">Resposta do Servidor</span></h2>
+        <h2 id="idcabelho">  Tratamento de matrizes em PHP - Lista05 - Exercicio 02<br> <span class="blinking-text">Resposta do Servidor</span></h2>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
@@ -39,9 +39,9 @@
                 $media03 = $_POST['nota-aluno03'];
 
                     $matrizAlunos=[
-                        [$matricula01] => [$aluno01,$media01],
-                        [$matricula02] => [$aluno02,$media02],
-                        [$matricula03] => [$aluno03,$media03]
+                        $matricula01 => [$aluno01,$media01],
+                        $matricula02 => [$aluno02,$media02],
+                        $matricula03 => [$aluno03,$media03]
                     ];
 
                 // $matrizAlunos = [
@@ -51,9 +51,7 @@
                 // ];
             }
 
-            echo "<pre>";
-            print_r($matrizAlunos);
-            echo "</pre>";
+            
             // Mostrar os dados em formato tabular
             echo "<h3>Notas dos Alunos</h3>";
             echo "<table>
@@ -86,6 +84,10 @@
         echo "<script>
         Alert(Meida Geral: ".number_format(media,1,",",".")."<br>Volte Semre!)
             </script>"
+
+            echo "<pre>";
+            print_r($matrizAlunos);
+            echo "</pre>";
 
         ?>
         

@@ -47,12 +47,12 @@
 
 
                     // $matrizAlunos=[
-                    //     ['$matricula01'][0] => '$aluno01',
-                    //     ['$matricula01'][1] => '$media01',
-                    //     ['$matricula02'][0] => '$aluno02',
-                    //     ['$matricula02'][1] => '$media02',
-                    //     ['$matricula03'][0] => '$aluno03',
-                    //     ['$matricula03'][1] => '$media03',
+                    //     $matricula01[0] => $aluno01,
+                    //     $matricula01[1] => $media01,
+                    //     $matricula02[0] => $aluno02,
+                    //     $matricula02[1] => $media02,
+                    //     $matricula03[0] => $aluno03,
+                    //     $matricula03[1] => $media03,
                     // ];
 
                 // $matrizAlunos = [
