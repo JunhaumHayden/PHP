@@ -1,10 +1,9 @@
-
-<!DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Resp_PHP</title>
+        <title>PHP</title>
         <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="shortcut icon" type="imagex/png" href="/web/icons/icon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200;1,400&family=Red+Hat+Display:wght@400;500;700&family=Roboto&display=swap"
@@ -13,55 +12,46 @@
         
     </head>
     <body>
-        <h2 id="idcabelho">  Tratamento de vetores em PHP - Lista04 - Exercicio 01<br> <span class="blinking-text">Resposta do Servidor</span></h2>
+        <header>
+            <h2>🌐 PHP WebCode Development Wonderland 🐘</h2>
+            <h3 id="idcabelho">  Tratamento de vetores em PHP - Lista04 <br>Exercicio 04
+            </h3> 
+        </header>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
-                <li><a href="./index.html">Voltar</a></li>
-                
+
+                <li><a href="/web/index.html">Voltar</a></li>
+                <li><a href="#tutorials">Tutoriais</a></li>
+                <li><a href="#highlights">Destaques</a></li>
+                <li><a href="#contributions">Contribuições</a></li>
             </ul>
         </nav>
 
-        <?php
-            //recebendo dados de formularios e armazenando em variaveis e criar o vetor de indice numerico para armazenar as 3 notas
-            $nomeDoAluno   = $_POST['nome-aluno'];
-            $vetorNotas[0] = $_POST['nota01'];
-            $vetorNotas[1] = $_POST['nota02'];
-            $vetorNotas[3] = $_POST['nota03'];
 
-            // // Calcular media
-            // echo "<p>";
-            // foreach($vetorNotas as $x)
-            // {
-            //     echo "Nota do aluno = $x <br>";
-            // }
-            // echo "</p>";
-
-            $soma = array_sum($vetorNotas);
-            $media = $soma/count($vetorNotas);
-            
-
-            echo "<p> <h3>Notas do Aluno:</h3><br>
-                    Nome do Aluno: $nomeDoAluno<br>
-                    Media onderada: <span>". number_format($media, 1,",",".") . "</span><br>";
-            foreach($vetorNotas as $x)
-            {
-                echo "Nota do aluno = $x <br>";
-            }
-            echo "</p>";
-
-            // modos de representacao
-            echo "<p> Veja essas outras maneiras de apresentar o vetor em PHP<br>";
-            // Modo bruto
-            print_r($vetorNotas);
-            // Modo Formatado
-            echo "<pre>"; // tag para preformatacao em html
-            print_r($vetorNotas);
-            echo "</pre>";
-            echo "</p>";
-        ?>
         
+        <form method="post" action="recebe-dados.php">
+            <fieldset>
+                <legend> 
+                    Carrinho de Compras
+                </legend>
+            
+                        <label class = 'alinha'>Selecione os produtos:</label><br>
+                        <input type = 'checkbox' name="produtos[]" value="impressora" required>
+                        <label for="produtos[]">Impressora</label><br>
+
+                        <input type = 'checkbox' name="prduto[]" value="placaVideo" required><label for="produtos[]">Placa de Video</label><br>
+                        <input type = 'checkbox' name="prduto[]" value="mouse" required><label for="produtos[]">Mouse</label><br><br>
+
+                
+                <button> --Executar-- </button>
+              
+            </fieldset>
+        </form>
     </body>
+
+
+
 
     <footer>
         <table>
@@ -97,5 +87,3 @@
     </footer> 
     
     </html>
-    
-   

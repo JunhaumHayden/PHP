@@ -11,7 +11,7 @@
     rel="stylesheet">  
     </head>
     <body>
-        <h1 id="idcabelho">  Tratamento de vetores em PHP - Lista 04 - Exercicio 02<br><span class="blinking-text">Resposta do Servidor</span></h1>
+        <h2 id="idcabelho">  Tratamento de vetores em PHP - Lista 04 - Exercicio 02<br><span class="blinking-text">Resposta do Servidor</span></h2>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
@@ -60,8 +60,8 @@
 
         // Mostrar o nome e a nota do aluno com a maior nota
         echo "<h3>Aluno com Maior Nota</h3>";
-        echo "Nome: {$nomeMaiorNota}<br>";
-        echo "Nota: {$maiorNota}";
+        echo "<p>Nome: {$nomeMaiorNota}<br>";
+        echo "Nota: {$maiorNota}</p>";
 
         ?>
         

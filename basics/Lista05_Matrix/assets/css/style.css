@@ -15,17 +15,17 @@ h2 {
 h3 {
     margin: 0;
     text-align: center;
-    color: #a9aaac;
+    color: #f3f4f6;
     border-bottom: 1px solid #000;
     margin-top: 50px;
-    background-color: rgba(17, 7, 213, 0.888);
-    text-shadow: 1px 1px #fff;
+    background-color: rgba(171, 171, 171, 0.888);
+    /* text-shadow: 1px 1px #fff; */
 } 
 
 header h3 {
     margin: 0;
     text-align: center;
-    color: #7f6f74;
+    color: #fefdfe;
     text-shadow: 1px 1px #efddddcc;
 }
 
@@ -64,12 +64,20 @@ fieldset {
     background-color: aquamarine;
     border-radius: 10px;
     padding-bottom: 25px;
+    margin-bottom: 20px;
 }
-
-input[id="Aluno"]{
+/* Formatar todo input com um atributo id igual a 'Aluno'*/
+/* input[id="Aluno"]{
+    width: 60%;
+} */
+/* Formatar todo input com um atributo name igual a 'Aluno'
+  Modificadores especiais  
+   usar '*' com qualquer caracter antes e depois
+   usar $ que terminar com Aluno
+   usar 'ˆ' que começa com Aluno */
+input[name*="Aluno"]{
     width: 60%;
 }
-
 .section {
     font-weight: bold;
     color: gray;
@@ -170,6 +178,45 @@ table{
 
 
 footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.info {
+    text-align: center;
+}
+
+.icons img {
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icons img {
+        margin: 10px 5px;
+    }
+}
+
+
+/* footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -197,4 +244,4 @@ footer {
 
 .icons img {
     margin-left: 10px;
-}
+} */

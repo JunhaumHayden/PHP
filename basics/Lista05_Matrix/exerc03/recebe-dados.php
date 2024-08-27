@@ -8,12 +8,10 @@
         <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="shortcut icon" type="imagex/png" href="/web/icons/icon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200;1,400&family=Red+Hat+Display:wght@400;500;700&family=Roboto&display=swap"
-    rel="stylesheet">
-
-        
+    rel="stylesheet">  
     </head>
     <body>
-        <h2 id="idcabelho">  Tratamento de vetores em PHP - Lista04 - Exercicio 01<br> <span class="blinking-text">Resposta do Servidor</span></h2>
+        <h2 id="idcabelho">  Tratamento de vetores em PHP - Lista 04 - Exercicio 03<br><span class="blinking-text">Resposta do Servidor</span></h2>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
@@ -24,41 +22,43 @@
 
         <?php
             //recebendo dados de formularios e armazenando em variaveis e criar o vetor de indice numerico para armazenar as 3 notas
-            $nomeDoAluno   = $_POST['nome-aluno'];
-            $vetorNotas[0] = $_POST['nota01'];
-            $vetorNotas[1] = $_POST['nota02'];
-            $vetorNotas[3] = $_POST['nota03'];
-
-            // // Calcular media
-            // echo "<p>";
-            // foreach($vetorNotas as $x)
-            // {
-            //     echo "Nota do aluno = $x <br>";
-            // }
-            // echo "</p>";
-
-            $soma = array_sum($vetorNotas);
-            $media = $soma/count($vetorNotas);
-            
-
-            echo "<p> <h3>Notas do Aluno:</h3><br>
-                    Nome do Aluno: $nomeDoAluno<br>
-                    Media onderada: <span>". number_format($media, 1,",",".") . "</span><br>";
-            foreach($vetorNotas as $x)
+            if ($_SERVER["REQUEST_METHOD"] == "POST") 
             {
-                echo "Nota do aluno = $x <br>";
+                $vetorAlunos = [
+                    $_POST['nome-aluno01'] => floatval($_POST['nota01']), 
+                    $_POST['nome-aluno02'] => floatval($_POST['nota02']), 
+                    $_POST['nome-aluno03'] => floatval($_POST['nota03'])
+                ];
             }
-            echo "</p>";
 
-            // modos de representacao
-            echo "<p> Veja essas outras maneiras de apresentar o vetor em PHP<br>";
-            // Modo bruto
-            print_r($vetorNotas);
-            // Modo Formatado
-            echo "<pre>"; // tag para preformatacao em html
-            print_r($vetorNotas);
-            echo "</pre>";
-            echo "</p>";
+            // Ordenar o vetor de forma decrescente (da maior nota para a menor)
+            // A função arsort($alunos) é usada para ordenar o array associativo em ordem decrescente de acordo com as notas.
+        arsort($vetorAlunos);
+            // Mostrar os dados em formato tabular
+            echo "<h3>Notas dos Alunos</h3>";
+            echo "<table>
+                    <tr>
+                        <th> Nome do Aluno</th>
+                        <th> Nota de PRWI</th>
+                    </tr>";
+            foreach($vetorAlunos as $nome => $nota)
+            {
+                echo "<tr>
+                        <td> $nome </td>
+                        <td> $nota  </td>
+                      </tr>";
+            }
+            echo "</table>";
+
+            // Encontrar o aluno com a maior nota
+        $nomeMaiorNota = array_keys($vetorAlunos, max($vetorAlunos))[0];
+        $maiorNota = $vetorAlunos[$nomeMaiorNota];
+
+        // Mostrar o nome e a nota do aluno com a maior nota
+        echo "<h3>Aluno com Maior Nota</h3>";
+        echo "<p>Nome: {$nomeMaiorNota}<br>";
+        echo "Nota: {$maiorNota}</p>";
+
         ?>
         
     </body>

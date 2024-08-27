@@ -8,12 +8,10 @@
         <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="shortcut icon" type="imagex/png" href="/web/icons/icon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200;1,400&family=Red+Hat+Display:wght@400;500;700&family=Roboto&display=swap"
-    rel="stylesheet">
-
-        
+    rel="stylesheet">  
     </head>
     <body>
-        <h2 id="idcabelho">  Tratamento de vetores em PHP - Lista04 - Exercicio 01<br> <span class="blinking-text">Resposta do Servidor</span></h2>
+        <h2 id="idcabelho">  Tratamento de vetores em PHP - Lista 04 - Exercicio 04<br><span class="blinking-text">Resposta do Servidor</span></h2>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
@@ -24,41 +22,51 @@
 
         <?php
             //recebendo dados de formularios e armazenando em variaveis e criar o vetor de indice numerico para armazenar as 3 notas
-            $nomeDoAluno   = $_POST['nome-aluno'];
-            $vetorNotas[0] = $_POST['nota01'];
-            $vetorNotas[1] = $_POST['nota02'];
-            $vetorNotas[3] = $_POST['nota03'];
-
-            // // Calcular media
-            // echo "<p>";
-            // foreach($vetorNotas as $x)
-            // {
-            //     echo "Nota do aluno = $x <br>";
-            // }
-            // echo "</p>";
-
-            $soma = array_sum($vetorNotas);
-            $media = $soma/count($vetorNotas);
-            
-
-            echo "<p> <h3>Notas do Aluno:</h3><br>
-                    Nome do Aluno: $nomeDoAluno<br>
-                    Media onderada: <span>". number_format($media, 1,",",".") . "</span><br>";
-            foreach($vetorNotas as $x)
+            if ($_SERVER["REQUEST_METHOD"] == "POST") 
             {
-                echo "Nota do aluno = $x <br>";
+                $vetorPrecos = [
+                    impressora => floatval(800.17), 
+                    placaVideo => floatval(600.27), 
+                    mouse => floatval(80.66)
+                ];
             }
-            echo "</p>";
 
-            // modos de representacao
-            echo "<p> Veja essas outras maneiras de apresentar o vetor em PHP<br>";
-            // Modo bruto
-            print_r($vetorNotas);
-            // Modo Formatado
-            echo "<pre>"; // tag para preformatacao em html
-            print_r($vetorNotas);
-            echo "</pre>";
-            echo "</p>";
+            if(isset($_POST['produtos'])){
+                exit("<p> Não adiquiriu produtos</p>");
+            }
+            //recebendo dados do checkbox, vindo do formulário. Lembrar que o PHP ja armazena os dados de um checkbox em um vetor.
+            $vetorProdutosComprados = $_POST['produtos'];
+            //Laço de repetiçao para iterar sobre o vetor de produto comprado.
+            $soma = 0;
+            foreach($vetorProdutosComprados as $valTempProd)
+            {
+                $soma += $vetorPrecos[$valTempProd];
+            }
+            // Mostrar os dados em formato tabular
+            echo "<h3>Relacao de produtos</h3>";
+            echo "<table>
+                    <tr>
+                        <th> Produto</th>
+                        <th> Preco</th>
+                    </tr>";
+            foreach($vetorProdutosComprados as $nome => $nota)
+            {
+                echo "<tr>
+                        <td> $nome </td>
+                        <td> $nota  </td>
+                      </tr>";
+            }
+            echo "</table>";
+
+            // Encontrar o aluno com a maior nota
+        $nomeMaiorNota = array_keys($vetorAlunos, max($vetorAlunos))[0];
+        $maiorNota = $vetorAlunos[$nomeMaiorNota];
+
+        // Mostrar o nome e a nota do aluno com a maior nota
+        echo "<h3>Aluno com Maior Nota</h3>";
+        echo "<p>Nome: {$nomeMaiorNota}<br>";
+        echo "Nota: {$maiorNota}</p>";
+
         ?>
         
     </body>
