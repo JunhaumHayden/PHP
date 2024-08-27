@@ -67,9 +67,10 @@ Atualizações Regulares: Novos conteúdos adicionados frequentemente para mant�
 ### 🤝 Contribuições
 Este repositório é feito para a comunidade e por ela. Tem uma ideia brilhante ou encontrou um bug? Fique à vontade para fazer um fork do repositório, criar uma branch, e enviar um pull request. Juntos, podemos tornar este repositório o recurso definitivo para desenvolvimento web com PHP.
 
-🌟 Junte-se à Aventura!
+### 🌟 Junte-se à Aventura!
 
-Prepare seu ambiente de desenvolvimento, clone este repositório e comece a explorar. Quer você seja um novato ou um mago do PHP, sempre há algo novo para descobrir no PHP Web Development Wonderland.
+Este repositório esta estruturado para exibir um web site, para usar, basta, na raiz do seu web server (como por exemplo, o Apache) crie um diretório chamado `web` e clone este repositório e comece a explorar.
+Quer você seja um novato ou um mago do PHP, sempre há algo novo para descobrir no PHP Web Development Wonderland.
 
 Happy coding! 🐘✨
 
