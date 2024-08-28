@@ -13,7 +13,7 @@
         
     </head>
     <body>
-        <h2 id="idcabelho">  Tratamento de matrizes em PHP - Lista05 - Exercicio 01<br> <span class="blinking-text">Resposta do Servidor</span></h2>
+        <h2 id="idcabelho">  Tratamento de matrizes em PHP - Lista05 - Exercicio 05<br> <span class="blinking-text">Resposta do Servidor</span></h2>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
@@ -44,26 +44,14 @@
                 $matrizAlunos[$matricula02][1] = $media02;
                 $matrizAlunos[$matricula03][0] = $aluno03;
                 $matrizAlunos[$matricula03][1] = $media03;
-
-
-                    // $matrizAlunos=[
-                    //     $matricula01[0] => $aluno01,
-                    //     $matricula01[1] => $media01,
-                    //     $matricula02[0] => $aluno02,
-                    //     $matricula02[1] => $media02,
-                    //     $matricula03[0] => $aluno03,
-                    //     $matricula03[1] => $media03,
-                    // ];
-
-                // $matrizAlunos = [
-                //     [$_POST['matricula-aluno01']][0] => $_POST['nome-aluno01'],
-                //     [$_POST['matricula-aluno01']][1] => $_POST['nota-aluno01'],
-                //     [$_POST['matricula-aluno02']][0] => $_POST['nome-aluno02'],
-                //     [$_POST['matricula-aluno02']][1] => $_POST['nota-aluno02'],
-                //     [$_POST['matricula-aluno03']][0] => $_POST['nome-aluno03'],
-                //     [$_POST['matricula-aluno03']][1] => $_POST['nota-aluno03']
-                // ];
             }
+            //Percorrer a matriz e criar um vetor auxiliar, armazenando a media de cada aluno. a matricula do aluno e o indice deste vetor.
+            foreach($matrizAlunos as $matricula => $vetorInterno)
+            {
+                $vetorAuxiliar[$matricula] = $vetorInterno[1];
+            }
+            //ordenando o vetor auxiliar
+            arsort($vetorAuxiliar);
 
             
             // Mostrar os dados em formato tabular
@@ -77,19 +65,15 @@
                     </tr>";
                     //Percorrer a matriz para montar a tabela na pagina web.
                     //foreach (nome_matriz as indice => variavel_auxiliar)
-            foreach($matrizAlunos as $matric => $vetorInterno)
+            foreach($vetorAuxiliar as $matric => $mediaAuxiliar)
             {
                 echo "<tr>
                         <td> $matric </td>
-                        <td> $vetorInterno[0] </td>
-                        <td> $vetorInterno[1] </td>
+                        <td> {$matrizAlunos[$matric][0]} </td>
+                        <td> $mediaAuxiliar </td>
                       </tr>";
             }
             echo "</table>";
-
-            echo "<pre>";
-            print_r($matrizAlunos);
-            echo "</pre>";
 
         ?>
         

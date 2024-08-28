@@ -13,7 +13,7 @@
         
     </head>
     <body>
-        <h2 id="idcabelho">  Tratamento de matrizes em PHP - Lista05 - Exercicio 02<br> <span class="blinking-text">Resposta do Servidor</span></h2>
+        <h2 id="idcabelho">  Tratamento de matrizes em PHP - Lista05 - Exercicio 06<br> <span class="blinking-text">Resposta do Servidor</span></h2>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
@@ -24,33 +24,16 @@
 
         <?php
             //recebendo dados de formularios e armazenando em variaveis e criar a matriz de indice numerico para armazenar as 3 notas
-            if (isset($_POST['nome-aluno01'])) 
+            if (isset($_POST['nome-medicamento01'])) 
             {
-                $aluno01 = $_POST['nome-aluno01'];
-                $aluno02 = $_POST['nome-aluno02'];
-                $aluno03 = $_POST['nome-aluno03'];
 
-                $matricula01 = $_POST['matricula-aluno01'];
-                $matricula02 = $_POST['matricula-aluno02'];
-                $matricula03 = $_POST['matricula-aluno03'];
-
-                $media01 = $_POST['nota-aluno01'];
-                $media02 = $_POST['nota-aluno02'];
-                $media03 = $_POST['nota-aluno03'];
-
-                    $matrizAlunos=[
-                        $matricula01 => [$aluno01,$media01],
-                        $matricula02 => [$aluno02,$media02],
-                        $matricula03 => [$aluno03,$media03]
-                    ];
-
-                // $matrizAlunos = [
-                //     [$_POST['matricula-aluno01']] => [$_POST['nome-aluno01'],$_POST['nota-aluno01']],
-                //     [$_POST['matricula-aluno02']] => [$_POST['nome-aluno02'],$_POST['nota-aluno02']],
-                //     [$_POST['matricula-aluno03']] => [$_POST['nome-aluno03'],$_POST['nota-aluno03']]
-                // ];
+                $matrizMedicamentos = [
+                    $_POST['codigo_medicamento01'] => [$_POST['nome-medicamento01'],$_POST['preco-medicamento01']],
+                    $_POST['codigo_medicamento02'] => [$_Post['nome-medicamento02'],$_POST['preco-medicamento02']],
+                    $_POST['codigo_medicamento03'] => [$_POST['nome-medicamento03'],$_POST['preco-medicamento03']]
+                ];
             }
-
+            $codigoPesquisado = $_POST['pesquisa-medicamento'];
             
             // Mostrar os dados em formato tabular
             echo "<h3>Notas dos Alunos</h3>";
@@ -63,29 +46,20 @@
                     </tr>";
                     //Percorrer a matriz para montar a tabela na pagina web.
                     //foreach (nome_matriz as indice => variavel_auxiliar)
-            foreach($matrizAlunos as $matric => $vetorInterno)
+            foreach($matrizMedicamentos as $codigo => $vetorInterno)
             {
+                $vetorAuxilixar[$codigo] = $vetorInterno[1];
                 echo "<tr>
-                        <td> $matric </td>
+                        <td> $codigo </td>
                         <td> $vetorInterno[0] </td>
-                        <td> $vetorInterno[1] </td>
+                        <td> $vetorInterno </td>
                       </tr>";
             }
             echo "</table>";
-
-            // calcular a media geral
-        foreach($matrizAlunos as $matric => $vetorInterno)
-        {
-            $vetorTmp[] = $vetorInterno[1];
-        }
-        $media = array_sum($vetorTmp) / count($vetorTmp);
-
-        // Mostrar o nome e a nota do aluno com a maior nota
-        echo "<script>
-        Alert(Meida Geral: ".number_format($media,1,",",".")."<br>Volte Semre!)
-            </script>";
+            $precoMedicamentoMaisBarato = min($vetorAuxilixar);
+            $codigoMedicamentoMaisBarato = array_search($precoMedicamentoMaisBarato,$matrizMedicamentos);
+             
         ?>
-        
     </body>
 
     <footer>

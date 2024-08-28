@@ -8,10 +8,12 @@
         <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="shortcut icon" type="imagex/png" href="/web/icons/icon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200;1,400&family=Red+Hat+Display:wght@400;500;700&family=Roboto&display=swap"
-    rel="stylesheet">  
+    rel="stylesheet">
+
+        
     </head>
     <body>
-        <h2 id="idcabelho">  Tratamento de vetores em PHP - Lista 04 - Exercicio 04<br><span class="blinking-text">Resposta do Servidor</span></h2>
+        <h2 id="idcabelho">  Tratamento de matrizes em PHP - Lista05 - Exercicio 02<br> <span class="blinking-text">Resposta do Servidor</span></h2>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
@@ -21,88 +23,101 @@
         </nav>
 
         <?php
-            //recebendo dados de formularios e armazenando em variaveis e criar o vetor de indice numerico para armazenar as 3 notas
-            if ($_SERVER["REQUEST_METHOD"] == "POST") 
+            //recebendo dados de formularios e armazenando em variaveis e criar a matriz de indice numerico para armazenar as 3 notas
+            if (isset($_POST['nome-aluno01'])) 
             {
-                $vetorPrecos = [
-                    impressora => floatval(800.17), 
-                    placaVideo => floatval(600.27), 
-                    mouse => floatval(80.66)
-                ];
+                $aluno01 = $_POST['nome-aluno01'];
+                $aluno02 = $_POST['nome-aluno02'];
+                $aluno03 = $_POST['nome-aluno03'];
+
+                $matricula01 = $_POST['matricula-aluno01'];
+                $matricula02 = $_POST['matricula-aluno02'];
+                $matricula03 = $_POST['matricula-aluno03'];
+
+                $media01 = $_POST['nota-aluno01'];
+                $media02 = $_POST['nota-aluno02'];
+                $media03 = $_POST['nota-aluno03'];
+
+                    $matrizAlunos=[
+                        $matricula01 => [$aluno01,$media01],
+                        $matricula02 => [$aluno02,$media02],
+                        $matricula03 => [$aluno03,$media03]
+                    ];
+
+                    //recebendo dados do aluno
+                    $alunoPesquisado = $_POST['pesquisa-aluno']
             }
 
-            if(isset($_POST['produtos'])){
-                exit("<p> Não adiquiriu produtos</p>");
-            }
-            //recebendo dados do checkbox, vindo do formulário. Lembrar que o PHP ja armazena os dados de um checkbox em um vetor.
-            $vetorProdutosComprados = $_POST['produtos'];
-            //Laço de repetiçao para iterar sobre o vetor de produto comprado.
-            $soma = 0;
-            foreach($vetorProdutosComprados as $valTempProd)
-            {
-                $soma += $vetorPrecos[$valTempProd];
-            }
+            
             // Mostrar os dados em formato tabular
-            echo "<h3>Relacao de produtos</h3>";
+            echo "<h3>Notas dos Alunos</h3>";
             echo "<table>
+                    <caption> CTDS - PRWI - rendimento semestral do aluno </caption>
                     <tr>
-                        <th> Produto</th>
-                        <th> Preco</th>
+                        <th> Matricula do aluno</th>
+                        <th> Nome do aluno</th>
+                        <th> Media de PRWI</th>
                     </tr>";
-            foreach($vetorProdutosComprados as $nome => $nota)
+                    //Percorrer a matriz para montar a tabela na pagina web.
+                    //foreach (nome_matriz as indice => variavel_auxiliar)
+            foreach($matrizAlunos as $matric => $vetorInterno)
             {
+                $vetorAux[$matric] = $vetorInterno[0];
                 echo "<tr>
-                        <td> $nome </td>
-                        <td> $nota  </td>
+                        <td> $matric </td>
+                        <td> $vetorInterno[0] </td>
+                        <td> $vetorInterno[1] </td>
                       </tr>";
             }
             echo "</table>";
 
-            // Encontrar o aluno com a maior nota
-        $nomeMaiorNota = array_keys($vetorAlunos, max($vetorAlunos))[0];
-        $maiorNota = $vetorAlunos[$nomeMaiorNota];
+            //usando a funcao in_array sobre o vetor auxiliar
+            $encontrou = in_array($alunoPesquisado, $vetorAux);
+            if($encontrou)
+            {
+                //buscando a matricula do aluno pesquisado no vetor auxilar
+                $matriculaAlunoPesquisado = array_search($alunoPesquisado, $vetorAux);
+                $mediaAlunoPesquisado = $matrizAlunos[$matriculaAlunoPesquisado][1];
+                echo "<p> Dados do Aluno pesquisado: <br>
+                Aluno pesquisado = <span> $alunoPesquisado </span><br>
+                MAtricula do Aluno pesquisado = <span> $matriculaAlunoPesquisado </span><br>
+                Media do aluno pesquisado = <span> $mediaAlunoPesquisado </span></p>";
+            }else{
+                echo "<p>Caro professor, aluno de nome <span> $alunoPesquisado </span>";
+            }
+
+            // calcular a media geral
+        foreach($matrizAlunos as $matric => $vetorInterno)
+        {
+            $vetorTmp[] = $vetorInterno[1];
+        }
+        $media = array_sum($vetorTmp) / count($vetorTmp);
 
         // Mostrar o nome e a nota do aluno com a maior nota
-        echo "<h3>Aluno com Maior Nota</h3>";
-        echo "<p>Nome: {$nomeMaiorNota}<br>";
-        echo "Nota: {$maiorNota}</p>";
-
+        echo "<script>
+        Alert(Meida Geral: ".number_format($media,1,",",".")."<br>Volte Semre!)
+            </script>";
         ?>
         
     </body>
 
     <footer>
-        <table>
-            <tr> 
-                <td>
-                    <div class="logo">
-                        <img src="/web/icons/icon36x36.ico" width="30" alt="Logo">
-                    </div>    
-                </td> 
-                <td>
-                    <div class="info">
-                        <div>&copy; 2024 HTML / CSS / JavaScript</div>
-                        <div>Desenvolvido por: Carlos Hayden Junior</div>
-                    </div>
-                </td> 
-                <td>
-                    <div class="icons">
-                        <img src="/web/icons/icon-html5-48.png" width="20" alt="HTML Icon">
-                    </div>
-                </td> 
-                <td>
-                    <div class="icons">
-                        <img src="/web/icons/icon-css3-48.ico" width="20" alt="CSS Icon">
-                    </div>
-                </td> 
-                <td>
-                    <div class="icons">
-                        <img src="/web/icons/icons8-js-48.png" width="20" alt="JS Icon">
-                    </div>
-                </td> 
-            </tr>
-        </table>
-    </footer> 
+    <div class="footer-container">
+        <div class="logo">
+            <img src="/web/icons/icon36x36.ico" width="30" alt="Logo">
+        </div>
+        <div class="info">
+            <div>&copy; 2024 HTML / CSS / JavaScript</div>
+            <div>Desenvolvido por: Carlos Hayden Junior</div>
+        </div>
+        <div class="icons">
+            <img src="/web/icons/icon-html5-48.png" width="20" alt="HTML Icon">
+            <img src="/web/icons/icon-css3-48.ico" width="20" alt="CSS Icon">
+            <img src="/web/icons/icons8-js-48.png" width="20" alt="JS Icon">
+        </div>
+    </div>
+</footer>
+
     
     </html>
     
