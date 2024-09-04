@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+  <meta charset="utf-8"> 
+  <title> PHP </title> 
+  <link rel="stylesheet" href="exerc4.css">
+</head> 
+
+<body> 
+ <h1> ListaL4 - exercício 4 - simulando um carrinho de compras vetores em PHP </h1>
+
+ <form method="post" action="recebe-dados.php">
+  <fieldset>
+   <legend> Carrinho de compras </legend>
+
+   <label> Caro cliente, selecione, abaixo, os produtos a serem adquiridos: </label> <br>
+   <input type="checkbox" name="produtos[]" value="Impressora"> <label> Impressora </label> <br>
+   <input type="checkbox" name="produtos[]" value="Placa de vídeo"> <label> Placa de vídeo </label> <br>
+   <input type="checkbox" name="produtos[]" value="Mouse"> <label> Mouse </label> <br>
+
+   <button> Comprar </button>
+  </fieldset>
+
+  
+ </form>
+</body> 
+</html> 

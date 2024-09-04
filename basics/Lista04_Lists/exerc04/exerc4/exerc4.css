@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body {
+ font-family: Oswald;
+ margin: 0;
+}
+
+h1 {
+ margin: 0;
+ text-align: center;
+ border-bottom: 1px solid #32CD32;
+ background-color: rgba(154, 213, 142, 0.5);
+ margin-bottom: 30px;
+ box-shadow: 0 0 5px 5px rgb(89, 116, 69);
+}
+
+fieldset {
+ width: 35%;
+ padding: 20px;
+ border: 1px solid #32CD32;
+ border-radius: 10px;
+ box-shadow: 5px 5px 5px rgba(4.7, 27.8, 0, 0.6);
+ margin: auto;
+ padding-bottom: 5px;
+ background-color: #9ad58e82;
+}
+
+label.alinha {
+ width: 200px;
+ display: inline-block;
+ text-align: right;
+ margin-bottom: 10px;
+}
+
+input[name="nome-aluno"] {
+ width: 60%;
+}
+
+button {
+ height: 40px;
+ width: 40%;
+ font-family: Oswald;
+ font-weight: bold;
+ font-size: 16px;
+ margin: auto;
+ display: block; 
+}
+
+p {
+ border: 1px solid #32CD32;
+ border-radius: 10px;
+ box-shadow: 5px 5px 5px rgba(4.7, 27.8, 0, 0.6);
+ width: 40%;
+ margin: 20px auto;
+ padding: 30px;
+}
+
+p.mostra {
+ display: block;
+}
+
+span {
+ color: red;
+}
+
+table {
+ border: 1px solid #729762;
+ width: 40%;
+ height: 250px;
+ margin: auto;
+ background-color: #597445;
+ font-size: 18px;
+ box-shadow:  5px 5px 5px rgb(89, 116, 69);
+}
+
+td, th {
+ border: 1px solid #597445;
+}
+
+td {
+ background: #E7F0DC;
+ text-align: center;
+}
+
+th {
+ color: #fff;
+}
+
+caption {
+ margin-bottom: 10px;
+}
