@@ -19,8 +19,6 @@
 
 #phpin
 
-
-
 # 🌐 PHP Web Development Wonderland 🐘
 
 ## Bem-vindo ao PHP Web Development Wonderland!

@@ -13,7 +13,7 @@
         
     </head>
     <body>
-        <h2 id="idcabelho">  Tratamento de matrizes em PHP - Lista05 - Exercicio 02<br> <span class="blinking-text">Resposta do Servidor</span></h2>
+        <h2 id="idcabelho">  Prática com PHP em Subrotinas - Lista06 - Exercicio 02<br> <span class="blinking-text">Resposta do Servidor</span></h2>
         <nav>
             <ul>
                 <li><a href="/web/index.html">Home</a></li>
@@ -24,66 +24,36 @@
 
         <?php
             //recebendo dados de formularios e armazenando em variaveis e criar a matriz de indice numerico para armazenar as 3 notas
-            if (isset($_POST['nome-aluno01'])) 
+            if (isset($_POST['nome-idade'])) 
             {
-                $aluno01 = $_POST['nome-aluno01'];
-                $aluno02 = $_POST['nome-aluno02'];
-                $aluno03 = $_POST['nome-aluno03'];
+                function testaridade($arg_Idade)
+                {
+                    //Funcao que testa os argumento
+                    $valorTestado = filter_var($arg_Iddade, FILTER_VALIDADE_INT);
+                    if ($valorTestado === false OR $valorTestado < 0) // operador === compara tipo e não o conteudo
+                    {
+                        exit("<p>Dado incorreto. Idade incorreta</p>");
+                    }
+                };
 
-                $matricula01 = $_POST['matricula-aluno01'];
-                $matricula02 = $_POST['matricula-aluno02'];
-                $matricula03 = $_POST['matricula-aluno03'];
+                function aptoVotar($idade)
+                {
+                    if ($idade >= 18)
+                    {
+                        Echo "Apto a votar";
+                    }
+                    else
+                    {
+                        Echo "Não esta apto a votar";
+                    };
+                }        
 
-                $media01 = $_POST['nota-aluno01'];
-                $media02 = $_POST['nota-aluno02'];
-                $media03 = $_POST['nota-aluno03'];
-
-                    $matrizAlunos=[
-                        $matricula01 => [$aluno01,$media01],
-                        $matricula02 => [$aluno02,$media02],
-                        $matricula03 => [$aluno03,$media03]
-                    ];
-
-                // $matrizAlunos = [
-                //     [$_POST['matricula-aluno01']] => [$_POST['nome-aluno01'],$_POST['nota-aluno01']],
-                //     [$_POST['matricula-aluno02']] => [$_POST['nome-aluno02'],$_POST['nota-aluno02']],
-                //     [$_POST['matricula-aluno03']] => [$_POST['nome-aluno03'],$_POST['nota-aluno03']]
-                // ];
+                $idade = $_POST['nome-idade'];
+                testarIdade($idade);
+                aptoVotar($idade);
+                echo "";
             }
-
-            
-            // Mostrar os dados em formato tabular
-            echo "<h3>Notas dos Alunos</h3>";
-            echo "<table>
-                    <caption> CTDS - PRWI - rendimento semestral do aluno </caption>
-                    <tr>
-                        <th> Matricula do aluno</th>
-                        <th> Nome do aluno</th>
-                        <th> Media de PRWI</th>
-                    </tr>";
-                    //Percorrer a matriz para montar a tabela na pagina web.
-                    //foreach (nome_matriz as indice => variavel_auxiliar)
-            foreach($matrizAlunos as $matric => $vetorInterno)
-            {
-                echo "<tr>
-                        <td> $matric </td>
-                        <td> $vetorInterno[0] </td>
-                        <td> $vetorInterno[1] </td>
-                      </tr>";
-            }
-            echo "</table>";
-
-            // calcular a media geral
-        foreach($matrizAlunos as $matric => $vetorInterno)
-        {
-            $vetorTmp[] = $vetorInterno[1];
-        }
-        $media = array_sum($vetorTmp) / count($vetorTmp);
-
-        // Mostrar o nome e a nota do aluno com a maior nota
-        echo "<script>
-        Alert(Meida Geral: ".number_format($media,1,",",".")."<br>Volte Semre!)
-            </script>";
+                
         ?>
         
     </body>
