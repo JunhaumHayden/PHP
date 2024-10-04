@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+  <meta charset="utf-8"> 
+  <title> PHP </title> 
+  <link rel="stylesheet" href="exerc1.css">
+</head> 
+
+<body> 
+ <h1> Prática com PHP - Subprogramação - ListaL6 - exercício 1 </h1>
+
+ <form method="post" action="recebe-dados.php">
+  <fieldset>
+   <legend> Alunos de PRW1 - CTDS - dados semestrais </legend>
+
+   <label class="alinha"> Aluno: </label>
+   <input type="text" name="aluno" autofocus> <br>
+
+   <label class="alinha"> Nota 1: </label>
+   <input type="number" name="nota1" min="0" max="10" step=".1"> <br>
+
+   <label class="alinha"> Nota 2: </label>
+   <input type="number" name="nota2" min="0" max="10" step=".1"> 
+  </fieldset>
+
+  <button> Calcular média e validar campos com funções em PHP </button>
+ </form>
+</body> 
+</html> 

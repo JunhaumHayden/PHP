@@ -25,6 +25,11 @@ nav ul li a {
     color: white;
     text-decoration: none;
 }
+/*Alterar a cor dos elementos do menu de navegaçao ao passar o mouse*/
+nav ul li a:hover {
+    color: rgb(177, 174, 174);
+    text-decoration: none;
+}
 
 body {
     font-family: Oswald, sans-serif;
@@ -32,6 +37,16 @@ body {
     padding: 0;
     background-color: #000;
     color: #8b8989;
+}
+/* Estilo específico para o accordion */
+.accordion {
+    margin-bottom: 20px;
+    margin-top: 20px;
+--bs-accordion-color: #a09d9d; /* Cor do texto */
+--bs-accordion-bg: #070707;    /* Cor de fundo */
+--bs-accordion-active-color: #ffffff; /* Cor do texto quando ativo */
+--bs-accordion-active-bg: #060606;   /* Cor de fundo quando ativo */
+--bs-accordion-btn-color: rgb(223, 31, 140); /* Cor do texto do botao */
 }
 
 /* Estilo específico para os links dentro da seção de destaques */
@@ -42,6 +57,17 @@ body {
 
 /* Estilo opcional para mudar a cor dos links quando o usuário passa o mouse */
 #highlights a:hover {
+    color: darkgray; /* Cor cinza escuro ao passar o mouse */
+}
+
+/* Estilo específico para os links dentro da seção de Ferramentas */
+#tools a {
+    color: gray; /* Define a cor cinza para os links */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+/* Estilo opcional para mudar a cor dos links quando o usuário passa o mouse */
+#tools a:hover {
     color: darkgray; /* Cor cinza escuro ao passar o mouse */
 }
 
@@ -95,7 +121,26 @@ header h1 {
 section h2 {
     color: #ff4081;
 }
-/*Ultima Paragrafo*/
+section h6 {
+    background-color: #e4e1e1;
+    text-align: center;
+    padding: 10px;
+    border-top: 4px solid #ff4081;
+    border-bottom: 4px solid #ff4081;
+    margin-bottom: 140px;
+}
+article time{
+    font-style: italic;
+    font-size: small;
+}
+/* tag usada para sitacoes (assim como a tag <q>)*/
+blockquote{
+    background-color: #272626;
+    padding: 15px;
+    margin-left: 0px;
+    border-left: #06a8de solid 5px;
+}
+/*Ultimo Paragrafo*/
 p.final {
     background-color: #e4e1e1;
     text-align: center;
@@ -107,39 +152,43 @@ p.final {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #080808;
-    color: #8d8d8d;
-    padding: 20px;
-    font-size: 9px;
-    font-family: Droid;
+    background-color: black;
+    color: white;
+    padding: 20px 0;
 }
-
-
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between; */
+    align-items: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size:9px;
+    font-family: Droid;
 }
 
 .logo img {
-    vertical-align: middle;
+    max-width: 100%;
 }
 
-.info p {
-    margin: 5cap 0;
-    font-family: Oswald, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #fffefe;
+.info {
+    text-align: left;
+    margin-left: 10px;
 }
 
 .icons img {
     margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icons img {
+        margin: 10px 5px;
+    }
 }
 

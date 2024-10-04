@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+  <meta charset="utf-8"> 
+  <title> PHP </title> 
+  <link rel="stylesheet" href="exerc4.css">
+</head> 
+
+<body> 
+ <h1> Prática com PHP - Subprogramação - ListaL6 - exercício 4 </h1>
+
+ <form method="post" action="recebe-dados04.php">
+  <fieldset>
+   <legend> Lojas AAA - controle de vendas com funções de usuário em PHP </legend>
+
+   <label class="alinha"> Forneça o valor da venda: </label>
+   <input type="number" name="valor-venda" autofocus step="0.01" min="0"> <br> <br>
+
+   <label class="alinha"> Forneça o percentual de comissão do vendedor: </label> 
+   <input type="number" name="percentual-comissao" min="0" step=".1"> <label>%</label> <br> <br>
+
+   <input type="checkbox" name="forma-pagamento[]" value="pagou com cartão de fidelidade"> <label> Marque esta opção se o cliente pagou a compra com cartão de fidelidade </label>
+   <br>
+
+   <button> Processar a venda com subrotinas em PHP </button>
+  </fieldset>
+ </form>
+</body> 
+</html> 

@@ -116,11 +116,13 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between; */
+    align-items: left;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    font-size: 9px;
+    font-family: Droid;
 }
 
 .logo img {
@@ -128,7 +130,8 @@ footer {
 }
 
 .info {
-    text-align: center;
+    text-align: left;
+    margin-left: 10px;
 }
 
 .icons img {
