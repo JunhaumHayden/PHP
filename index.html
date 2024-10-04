@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebCode</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="shortcut icon" type="imagex/png" href="/icons/icon.ico">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- link direcionando para o bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- ... -->
+    <link rel="stylesheet" href="/PHP/assets/css/styles.css">
+    <link rel="shortcut icon" type="imagex/png" href="/PHP/assets/icon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200;1,400&family=Red+Hat+Display:wght@400;500;700&family=Roboto&display=swap"
     rel="stylesheet">
-</head>
-
-<body>
+  </head>
+  <body>
     <header>
         <h1>🌐 WebCode Development Wonderland 🐘</h1>
     </header>
@@ -28,53 +30,99 @@
         <main>
             <section id="home">
                 <article>
-                <h2>Bem-vindo ao Web Server Development Wonderland!</h2>
-                <p>Publicado em <time pubdate>20/07/2024 19:27</time></p>
-                Você está prestes a embarcar em uma jornada mágica pelo mundo do desenvolvimento web com PHP. Este repositório é o seu guia encantado, repleto de scripts e exemplos que vão desde os fundamentos do PHP até as complexidades do desenvolvimento de aplicativos web robustos com layouts responsivos.</article>
+                    <h2>Bem-vindo ao Web Server Development Wonderland!</h2>
+                    <p>Publicado em <time pubdate>20/07/2024 19:27</time></p>
+                    Você está prestes a embarcar em uma jornada mágica pelo mundo do desenvolvimento web. Este repositório é o seu guia encantado, repleto de scripts e exemplos que vão desde os fundamentos do HTML Semântico até as complexidades do desenvolvimento de aplicativos web robustos com layouts responsivos, disponibilização e consumo de serviços web.
+                </article>
             </section>
-            <section id="highlights">
-                <h2>🎉 Destaques</h2>
-                <ul>
-                    <li><a href="/FrontEnd/landingpage/Flexbox/anuncios">Landing Page com HMTL5</a></li>
-                    <li><a href="/FrontEnd/landingpage/Flexbox/projeto-flex-turismo/">FlexTurismo com FlexBox</a></li>
-                    <li><a href="/FrontEnd/landingpage/Flexbox/anuncios/gatinhos.html">Veja fotos de gatinhos com JavaScript</a></li>
-                    <li><a href="./php/ComboViagem/homepage.php">Aproveite o nosso combo de viagens com jQUERY</a></li>
-                    <li><a href="./basics/Lista03_SimpleVariables/09_Compra_Premiada">Faça uma compra e concorra a premios com PHP</a></li>
-                    <li><a href="./basics/Lista03_SimpleVariables/">Desfrute de nossas calculadoras com PHP</a></li>
-                    <li><a href="./basics/Lista04_Lists/">Formularios inteligentes com PHP</a></li>
-                </ul>
-            </section>
-            <section id="tools">
-                <h2>🔧 Ferramentas e Tecnologias</h2>
-                <ul>
-                    <li><a href="./basics">PHP</a></li>
-                    <li><a href="/FrontEnd/HTML/">HTML5 & CSS3</a></li>
-                    <li><a href="/JavaScript/">JavaScript</a></li>
-                    <li><a href="./build.html">MySQL</a></li>
-                    <li><a href="./build.html">APIs RESTful</a></li>
-                </ul>
-            </section>
-            <section id="tutorials">
-                <h2>📚 Tutoriais e Exemplos</h2>
-                <ul>
-                    <li>Scripts Básicos</li>
-                    <li>CRUD</li>
-                    <li>Autenticação</li>
-                    <li>Integrações</li>
-                </ul>
-            </section>
-            
-            <section id="contributions">
-                <h2>🤝 Contribuições</h2>
-                <p>Este repositório é <q cite="https://junhaumhayden.github.io/publish/">feito para a comunidade e por ela</q>. Tem uma ideia brilhante ou encontrou um bug? Fique à vontade para fazer um fork do repositório, criar uma branch, e enviar um pull request. Juntos, podemos tornar este repositório o recurso definitivo para desenvolvimento web com PHP.</p>
-                <blockquote>Não sabendo que era impossivel...<br>Foi lá e soube!</blockquote>
-                
-            </section>
-            <section>
-                <p class="final">🌟 Junte-se à Aventura! Happy coding! 🐘✨</p>
-            </section>
-        </main>
+            <!-- Criando um botao para acionar o bootstrap -->
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            🎉 Destaques
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <section id="highlights">
+                                
+                                <ul>
+                                    <li><a href="/FrontEnd/landingpage/Flexbox/anuncios">Landing Page com HMTL5</a></li>
+                                    <li><a href="/FrontEnd/landingpage/Flexbox/projeto-flex-turismo/">FlexTurismo com FlexBox</a></li>
+                                    <li><a href="/FrontEnd/landingpage/Flexbox/anuncios/gatinhos.html">Veja fotos de gatinhos com JavaScript</a></li>
+                                    <li><a href="./php/ComboViagem/homepage.php">Aproveite o nosso combo de viagens com jQUERY</a></li>
+                                    <li><a href="./basics/Lista03_SimpleVariables/09_Compra_Premiada">Faça uma compra e concorra a premios com PHP</a></li>
+                                    <li><a href="./basics/Lista03_SimpleVariables/">Desfrute de nossas calculadoras com PHP</a></li>
+                                    <li><a href="./basics/Lista04_Lists/">Formularios inteligentes com PHP</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            🔧 Ferramentas e Tecnologias
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <section id="tools">
+                                
+                                <ul>
+                                    <li><a href="./basics">PHP</a></li>
+                                    <li><a href="/FrontEnd/HTML/">HTML5 & CSS3</a></li>
+                                    <li><a href="/JavaScript/">JavaScript</a></li>
+                                    <li><a href="./build.html">MySQL</a></li>
+                                    <li><a href="./build.html">APIs RESTful</a></li>
+                                    <li><a href="/Mobile/Bootstrap/">Bootstrap</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            📚 Tutoriais e Exemplos
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <section id="tutorials">
+                                <ul>
+                                    <li>Scripts Básicos</li>
+                                    <li>CRUD</li>
+                                    <li>Autenticação</li>
+                                    <li>Integrações</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            🤝 Contribuições
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <section id="contributions">
+                                Este repositório é <q cite="https://junhaumhayden.github.io/publish/">feito para a comunidade e por ela</q>. Tem uma ideia brilhante ou encontrou um bug? Fique à vontade para fazer um fork do repositório, criar uma branch, e enviar um pull request. Juntos, podemos tornar este repositório o recurso definitivo para desenvolvimento web com PHP.
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <blockquote>Não sabendo que era impossivel...<br>Foi lá e soube!</blockquote>
+                <section>
+                    <p class="final">🌟 Junte-se à Aventura! Happy coding! 🐘✨</p>
+                </section>
+        </main> 
         <aside class="ad-section">
             <h2>Anúncios</h2>
             <div class="ad">
@@ -98,25 +146,24 @@
                 <p><a href="../FrontEnd/landingpage/Flexbox/anuncios/gatinhos.html">Veja os Gatinhos mais fofinhos com JavaScript</a></p>
             </div>
         </aside>
-    </div>
-    <script src="scripts.js"></script>
-    <footer>
-        <div class="footer-container">
-            <div class="logo">
-                <img src="/assets/icons/icon36x36.ico" width="30" alt="Logo">
-            </div>
-            <div class="info">
-                <div>&copy; 2024 HTML / CSS / JavaScript</div>
-                <div>Desenvolvido por: Carlos Hayden Junior</div>
-            </div>
-            <div class="icons">
-                <img src="/assets/icons/icon-html5-48.png" width="20" alt="HTML Icon">
-                <img src="/assets/icons/icon-css3-48.ico" width="20" alt="CSS Icon">
-                <img src="/assets/icons/icons8-js-48.png" width="20" alt="JS Icon">
-            </div>
+        
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <footer>
+    <div class="footer-container">
+        <div class="logo">
+            <img src="/PHP/assets/icons/icon36x36.ico" width="30" alt="Logo">
         </div>
-    </footer>
+        <div class="info">
+            <div>&copy; 2024 HTML / CSS / JavaScript</div>
+            <div>Desenvolvido por: Carlos Hayden Junior</div>
+        </div>
+        <div class="icons">
+            <img src="/PHP/assets/icons/icon-html5-48.png" width="20" alt="HTML Icon">
+            <img src="/PHP/assets/icons/icon-css3-48.ico" width="20" alt="CSS Icon">
+            <img src="/PHP/assets/icons/icons8-js-48.png" width="20" alt="JS Icon">
+        </div>
+    </div>
+</footer>
 </body>
-
-
 </html>

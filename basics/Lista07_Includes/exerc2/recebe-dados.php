@@ -53,6 +53,8 @@
                 aptoVotar($idade);
                 echo "";
             }
+
+            include "footer.html";
                 
         ?>
         

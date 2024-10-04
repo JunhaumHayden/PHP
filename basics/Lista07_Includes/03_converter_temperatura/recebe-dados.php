@@ -37,14 +37,16 @@
                 $tempConvertida = converterDeFparaC($temp);
                 echo "<p> Resultado da conversao: <br>
                         Temperatura original em ºF = <span>{$temp}ºF</span><br>
-                        Temperatura Convertida para ºC = <span> {$tempConvertida}ºC</span></p>";
+                        Temperatura Convertida para ºC = <span> ".number_format($tempConvertida,1,",",".")."ºC</span></p>";
             }
             else{
                 $tempConvertida = converterDeCparaF($temp);
                 echo "<p> Resultado da conversao: <br>
                         Temperatura original em ºF = <span>{$temp}ºF</span><br>
-                        Temperatura Convertida para ºC = <span> {$tempConvertida}ºC</span></p>";
+                        Temperatura Convertida para ºC = <span> ".number_format($tempConvertida,1,",",".")."ºC</span></p>";
             }
+
+            
 
         ?>
         

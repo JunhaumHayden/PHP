@@ -1,5 +1,5 @@
 Options +Indexes
 IndexOptions FancyIndexing HTMLTable Charset=UTF-8
-HeaderName HEADER.html
-ReadmeName FOOTER.html
+HeaderName /PHP/assets/HEADER.html
+ReadmeName /PHP/assets/FOOTER.html
 IndexIgnore HEADER.html FOOTER.html .DS_Store assets/ .git .gitignore
