@@ -1,0 +1,18 @@
+{
+    "name": "hayden/login-project",
+    "description": "Login project with PHP and MySQL",
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hayden\\LoginProject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JunhaumHayden",
+            "email": "junhaumhayden@hotmail.com"
+        }
+    ]
+}
