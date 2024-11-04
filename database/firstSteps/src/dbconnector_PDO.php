@@ -13,9 +13,12 @@ class Database {
     private $connection;
 
     public function __construct() {
-        // Carregar variáveis de ambiente do arquivo .env
-        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        // Carregar as variáveis do arquivo .env
+        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../config');
         $dotenv->load();
+        // Carregar variáveis de ambiente do arquivo .env
+        // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        // $dotenv->load();
 
         $this->host = $_ENV['DB_HOST'];
         $this->dbName = $_ENV['DB_DATABASE'];
