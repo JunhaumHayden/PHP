@@ -33,7 +33,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['nome'] = $usuario['nome'];
 
-            header("Location: painel.php");
+            header("Location: ../src/painel.php");
 
         } else {
             echo "Falha ao logar! E-mail ou senha incorretos";
@@ -102,20 +102,64 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             <li><a href="tel:+5548988900001">Contato</a></li>
         </ul>
     </nav>
-    
-    <h1>Acesse sua conta</h1>
-    <form action="" method="POST">
-        <p>
-            <label>E-mail</label>
-            <input type="text" name="email">
-        </p>
-        <p>
-            <label>Senha</label>
-            <input type="password" name="senha">
-        </p>
-        <p>
-            <button type="submit">Entrar</button>
-        </p>
-    </form>
+    <section class="painel-login">
+        <div class="login-form">
+            <form action="" method="POST">
+                <h3 class="text-center">Acesse sua conta</h3> <!-- Título centralizado -->
+                <div class="mb-3"> <!-- Campo de entrada para nome de usuário -->
+                    <label for="username" class="form-label">Username</label>
+                    <input name="email" type="text" class="form-control" id="username" placeholder="Enter username">
+                </div>
+                <div class="mb-3"> <!-- Campo de entrada para senha -->
+                    <label for="password" class="form-label">Password</label>
+                    <input name="senha" type="password" class="form-control" id="password" placeholder="Enter password">
+                </div>
+                <div class="d-grid"> <!-- Botão de login ocupando toda a largura disponível -->
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                <div class="mt-3 text-center"> <!-- Link para recuperação de senha -->
+                    <a href="#">Forgot password?</a>
+                </div>
+                <div class="mt-2 text-center"> <!-- Link para criar nova conta -->
+                    <span>Don't have an account? <a href="#">Sign Up</a></span>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="corta">
+            <div class="opcao">
+                <i class="fa-solid fa-home"></i>
+                Home
+            </div>
+            <div class="opcao">
+                <i class="fa-solid fa-file"></i>
+                Op 1
+            </div>
+            <div class="opcao">
+                <i class="fa-solid fa-gear"></i>
+                Op 2
+            </div>
+        </div>
+        <div class="corta">
+            <div class="footer-container">
+                <div class="logo">
+                    <img src="/PHP/assets/icons/icon36x36.ico" width="30" alt="Logo">
+                </div>
+                <div class="info">
+                    <div>&copy; 2024 HTML / CSS / BootStrap</div>
+                    <div>Desenvolvido por: Carlos Hayden Junior</div>
+                </div>
+                <div class="icons">
+                    <img src="/PHP/assets/icons/icon-html5-48.png" width="20" alt="HTML Icon">
+                    <img src="/PHP/assets/icons/icon-css3-48.ico" width="20" alt="CSS Icon">
+                    <img src="/PHP/assets/icons/icons8-js-48.png" width="20" alt="JS Icon">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (optional for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
