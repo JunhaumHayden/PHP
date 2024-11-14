@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+  <meta charset="utf-8"> 
+  <title> POO com PHP </title> 
+  <link rel="stylesheet" href="formata-form.css">
+</head> 
+
+<body>
+  <h1> Fundamentos do PHP com POO - atividade 3 reformulada </h1>
+
+  <form action="atividade3-reformulada.php" method="post">
+    <fieldset>
+      <legend> Criar uma conta bancária com saldo inicial </legend>
+      <label> Forneça o saldo inicial da conta: </label>
+      <input type="number" name="saldo-inicial" min="0" step=".01">
+    </fieldset>
+
+    <fieldset>
+      <legend> Forneça o valor a ser depositado </legend>
+      <label> Forneça o valor a ser depositado na conta: </label>
+      <input type="number" name="deposito" min="0" step=".01">
+    </fieldset>
+
+    <fieldset>
+      <legend> Forneça o valor a ser sacado </legend>
+      <label> Forneça o valor a ser sacado da sua conta: </label>
+      <input type="number" name="saque" min="0" step=".01">
+    </fieldset>
+
+    <button> Processar dados da conta bancária </button>
+  </form>  
+</body>
+</html>

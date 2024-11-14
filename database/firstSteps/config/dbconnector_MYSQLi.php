@@ -3,6 +3,10 @@
 require '../vendor/autoload.php';
 // include_once __DIR__ . '/vendor/autoload.php';
 
+// Carregar as variáveis do arquivo .env
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../config');
+// $dotenv->load();
+
 class Database {
     private $host;
     private $dbName;
@@ -15,6 +19,9 @@ class Database {
         // Carregar as variáveis do arquivo .env
         $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../config');
         $dotenv->load();
+        // Carregar variáveis de ambiente do arquivo .env
+        // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        // $dotenv->load();
 
         $this->host = $_ENV['DB_HOST'];
         $this->dbName = $_ENV['DB_DATABASE'];

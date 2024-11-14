@@ -14,7 +14,6 @@
     // Usamos __DIR__ . '/../src/conexao.php' para especificar o caminho de index.php para src/conexao.php subindo um nível (..).
     // include_once garante que conexao.php seja incluído uma única vez, evitando duplicações.
     include_once __DIR__ . '/../src/dbconnector_MYSQLi.php';
-    include_once __DIR__ . '/../src/domain/criar-classe-alunos.inc.php';
     // Criar uma instância e conectar ao banco
     $db = new Database();
 

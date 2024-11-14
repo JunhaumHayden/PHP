@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Titillium+Web:wght@200;400&display=swap');
+
+body {
+ font-family: "Titillium Web";
+ margin: 0; 
+}
+
+h1 {
+ margin: 0;
+ text-align: center;
+ border-bottom: 1px solid #000;
+ box-shadow: 0 0 5px 5px rgba(36, 54, 66, 0.7);
+ background: #629584;
+ color: #fff;
+ text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+ margin-bottom: 40px;
+ font-family: "Roboto Slab";
+}
+
+fieldset, p {
+ border: 1px solid #000;
+ border-radius: 10px;
+ width: 60%; 
+ background: rgba(226, 241, 231, 50%);
+ margin: auto;
+ margin-top: 30px;
+}
+
+label.alinha {
+ width: 200px;
+ text-align: right;
+ display: inline-block;
+ margin-bottom: 10px;
+}
+
+input[name="nome"] {
+ width: 300px;
+}
+
+button, input {
+ font-family: "Roboto Slab";
+}
+
+button {
+ width: 300px;
+ height: 45px;
+ font-weight: bold;
+ font-size: 16px;
+}
+
+div {
+ text-align: center;
+ margin-top: 30px;
+}
+
+#botao-esquerdo {
+ margin-right: 10px;
+}
+
+#botao-direito {
+ margin-left: 10px;
+}
+
+p {
+ text-align: center;
+}
+
+span, caption {
+ color: #387478;
+ font-weight: bold;
+}
+
+table {
+ width: 60%;
+ border: 1px solid #243642;
+ margin: 20px auto;
+ box-shadow: 5px  5px 5px  rgba(36, 54, 66, 0.7);
+}
+
+td, th {
+ border: 1px solid #243642;
+}
+
+td {
+ text-align: center;
+ background: rgba(226, 241, 231, 40%);
+}
+
+th {
+ background: #629584;
+ color: #fff;
+}
+
+input[name="matric"], input[name="media-prw2"] {
+ width: 150px;
+}
