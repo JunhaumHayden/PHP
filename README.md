@@ -13,9 +13,13 @@
 
 
 
-<p align="center">
-    <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
-</p>
+![Static Badge](https://img.shields.io/badge/STATUS-Em_Constru%C3%A7%C3%A3o-green)
+
+![Static Badge](https://img.shields.io/badge/Powered_by-PHP-blue)
+![Static Badge](https://img.shields.io/badge/Powered_by-PHPUnit-4CAF50) ![Static Badge](https://img.shields.io/badge/Powered_by-MySQL-F29111) 
+
+
+
 
 #phpin
 
@@ -41,12 +45,12 @@ __4. APIs RESTful__: Conectando seu aplicativo a outros serviços de forma elega
 
 ### 📚 Tutoriais e Exemplos
 
-_Scripts Básicos_: Comece sua aventura com exemplos simples que ensinam os conceitos fundamentais do PHP.
+1. [Sobre Composer](./NotasMentais/composer.md)
+2. [Configurar um conector de banco de dados em PHP utilizando um arquivo .env](./NotasMentais/configuration.md)
+3. [PHPUint](./NotasMentais/phpunit.md)
+4. [Criando um Projeto](./NotasMentais/criando_projeto_php.md)
 
-_CRUD_: Criação, Leitura, Atualização e Exclusão de dados com PHP e MySQL.
 
-_Autenticação_: Segurança em primeiro lugar! Implemente login e registro de usuários com PHP.
-_Integrações_: Conecte seu site a APIs externas e torne-o ainda mais poderoso.
 
 ### 🗂️ Estrutura do Repositório
 `basics/`: Aprenda o básico com exemplos de sintaxe, variáveis, loops e condicionais.
