@@ -1,4 +1,6 @@
-# Preparação do hambiente
+# Utilizar Arquivo .env
+
+## Preparação do hambiente
 
 Para configurar um conector de banco de dados em PHP utilizando um arquivo .env para armazenar as informações sensíveis (como as credenciais do banco de dados), siga os passos abaixo. Usar um arquivo .env ajuda a manter boas práticas de segurança, evitando expor dados confidenciais diretamente no código.
 
