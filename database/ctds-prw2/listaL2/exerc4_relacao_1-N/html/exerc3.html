@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title> Fundamentos do PHp com banco de dados MySQL </title>
+ <link rel="stylesheet" href="../css/formata-banco.css">
+</head>
+<body>
+ <h1> Fundamentos do PHP com MySQL - exercício 1 </h1>
+
+ <form action="../php/exerc1.php" method="post">
+  <fieldset>
+   <legend> Módulo de cadastro de alunos </legend>
+
+   <label class="alinha"> Nome do aluno: </label>
+   <input type="text" name="nome" autofocus> <br>
+
+   <label class="alinha"> Matrícula do aluno: </label>
+   <input type="text" name="matric"> <br>
+
+   <label class="alinha"> Média do aluno em PRWII: </label>
+   <input type="number" name="media-prw2" min="0" max="10" step=".1"> <br>
+
+
+
+   <div>
+    <button name="cadastrar"> Efetuar cadastro do aluno </button>
+   </div>
+  </fieldset>
+
+  <fieldset>
+   <legend> Outras operações sobre os alunos </legend>
+
+   <div>
+    <button name="tabular-dados" id="botao-esquerdo"> Tabular dados dos alunos </button>
+
+    <button name="contar-aprovados" id="botao-direito"> Mostrar número de aprovados </button>
+   </div>
+  </fieldset>
+ </form> 
+</body>
+</html>

@@ -12,11 +12,7 @@ class Livro
     // Construtor para inicializar os atributos
     public function __construct(string $isbn, string $titulo, string $autor, float $preco, DateTime $dataLancamento)
     {
-        $this->isbn = $isbn;
-        $this->titulo = $titulo;
-        $this->autor = $autor;
-        $this->setPreco($preco);
-        $this->dataLancamento = $dataLancamento;
+        
     }
 
     // Método estático para criar uma instância com atributos
@@ -27,7 +23,12 @@ class Livro
         float $preco,
         DateTime $dataLancamento
     ): self {
-        return new self($isbn, $titulo, $autor, $preco, $dataLancamento);
+        $novoLivro new self();
+        $novoLivro->isbn = $isbn;
+        $novoLivro->titulo = $titulo;
+        $novoLivro->autor = $autor;
+        $novoLivro->setPreco($preco);
+        $novoLivro->dataLancamento = $dataLancamento;
     }
 
     // Métodos Getters

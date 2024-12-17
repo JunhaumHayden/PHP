@@ -1,82 +1,87 @@
 <?php
- class Livro
- {
+
+class Livro
+{
     // Atributos privados com tipos definidos
-    public $isbn;
-    public $titulo;
-    public $autor;
-    public $preco;
-    public $data;
+    private string $isbn;
+    private string $titulo;
+    private string $autor;
+    private float $preco;
+    private DateTime $dataLancamento;
 
-
-
-    function receberDados($conexao)
+    // Construtor para inicializar os atributos
+    public function __construct(string $isbn, string $titulo, string $autor, float $preco, DateTime $dataLancamento)
     {
-        //   $isbn         = trim($conexao->escape_string($_POST['isbn']));
-        //   $preco      = trim($conexao->escape_string($_POST['preco']));
-        //   $titulo     = trim($conexao->escape_string($_POST['titulo']));
-        //   $autor     = trim($conexao->escape_string($_POST['autor']));
-        //   $data     = trim($conexao->escape_string($_POST['data']));
-
-
-        //atribuir as variáveis às propriedades da instãncia da classe
-        $this->isbn         = trim($conexao->escape_string($_POST['isbn']));
-        $this->preco      = trim($conexao->escape_string($_POST['preco']));
-        $this->titulo    = trim($conexao->escape_string($_POST['titulo']));
-        $this->autor    = trim($conexao->escape_string($_POST['autor']));
-        $this->data    = trim($conexao->escape_string($_POST['data']));
+        $this->isbn = $isbn;
+        $this->titulo = $titulo;
+        $this->autor = $autor;
+        $this->setPreco($preco);
+        $this->dataLancamento = $dataLancamento;
     }
- 
-    //implementando o método de cadastro dos dados de cada aluno na tabela do banco de dados
-    function cadastrar($conexao, $nomeDaTabela)
+
+    // Método estático para criar uma instância com atributos
+    public static function comAtributos(
+        string $isbn,
+        string $titulo,
+        string $autor,
+        float $preco,
+        DateTime $dataLancamento
+    ): self {
+        return new self($isbn, $titulo, $autor, $preco, $dataLancamento);
+    }
+
+    // Métodos Getters
+    public function getIsbn(): string
     {
-        $sql = "INSERT $nomeDaTabela VALUES(
-                '$this->isbn',
-                '$this->titulo',
-                '$this->autor',
-                $this->preco,
-                '$this->data')";
-        // apostrofo apenas para dados do tipo varchar, numeros nao necessitam
-
-        $conexao->query($sql) OR die($conexao->error);
+        return $this->isbn;
     }
 
-    function tabularDados($conexao, $nomeDaTabela){
-        $sql = "SELECT * FROM $nomeDaTabela";
-        $resultado = $conexao->query($sql) OR die($conexao->error);
-
-        if($conexao->affected_rows == 0){
-            exit("<p> Nenhum registro retornado da consulta."); // metodo encerra o programa e sai, nao executa o codigo abaixo
-        }
-        
-
-        echo "<table>
-            <caption> Dados produtos <span> $nomeDaTabela</span></caption>
-            <tr>
-            <th>ISBN</th>
-            <th>Preço</th>
-            <th>Titulo</th>
-            <th>Autor</th>
-            <th>Data Lançamento</th>
-            </tr>";
-
-        while ($vetorRegistro = $resultado->fetch_array()) {
-            $isbn             = htmlentities($vetorRegistro[0], ENT_QUOTES, "UTF-8");
-            $titulo          = htmlentities($vetorRegistro[1], ENT_QUOTES, "UTF-8");
-            $autor        = htmlentities($vetorRegistro[2], ENT_QUOTES, "UTF-8");
-            $preco      = htmlentities($vetorRegistro[3], ENT_QUOTES, "UTF-8");
-            $data  = htmlentities($vetorRegistro[4], ENT_QUOTES, "UTF-8");
-
-            echo "<tr>
-                    <td> $isbn</td>
-                    <td> $titulo</td>
-                    <td> $autor</td>
-                    <td> $preco</td>
-                    <td> $data</td>
-                </tr>
-            </tables>";
-        }
+    public function getTitulo(): string
+    {
+        return $this->titulo;
     }
 
-    
- }
+    public function getAutor(): string
+    {
+        return $this->autor;
+    }
+
+    public function getPreco(): float
+    {
+        return $this->preco;
+    }
+
+    public function getDataLancamento(): DateTime
+    {
+        return $this->dataLancamento;
+    }
+
+    // Métodos Setters com validações
+    public function setIsbn(string $isbn): void
+    {
+        $this->isbn = $isbn;
+    }
+
+    public function setTitulo(string $titulo): void
+    {
+        $this->titulo = $titulo;
+    }
+
+    public function setAutor(string $autor): void
+    {
+        $this->autor = $autor;
+    }
+
+    public function setPreco(float $preco): void
+    {
+        if ($preco < 0) {
+            throw new InvalidArgumentException("O preço não pode ser negativo.");
+        }
+        $this->preco = $preco;
+    }
+
+    public function setDataLancamento(DateTime $dataLancamento): void
+    {
+        $this->dataLancamento = $dataLancamento;
+    }
+}
