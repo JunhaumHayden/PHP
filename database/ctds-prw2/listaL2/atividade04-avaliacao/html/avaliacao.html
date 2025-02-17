@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title> Atividade 04 - Avaliação </title>
+ <link rel="stylesheet" href="../css/formata-banco.css">
+</head>
+<body>
+ <h1> PHP com MySQL - Avaliação </h1>
+
+ <form action="../php/avaliacao.php" method="post">
+  <fieldset>
+   <legend> Módulo de cadastro do clube </legend>
+
+   <label class="alinha"> Nome do clube esportivo: </label>
+   <input type="text" name="nome" autofocus> <br>
+
+   <label class="alinha"> Nome do Estado de origem do clube esportivo: </label>
+   <input type="text" name="estado"> <br>
+
+   <label class="alinha"> Numero de vezes em que foi campeão pelo seu Estado: </label>
+   <input type="number" name="titulos" min="0" step="1"> <br>
+
+
+
+   <div>
+    <button name="cadastrar"> Efetuar cadastro do clube </button>
+   </div>
+  </fieldset>
+
+  <fieldset>
+   <legend> Outras operações sobre os clubes </legend>
+
+   <div>
+    <button name="tabular-dados" id="botao-esquerdo"> Mostrar todos os clubes que são bicampeões </button>
+
+    <button name="maior-campeao" id="botao-direito"> Mostrar o clube com o maior número de vezes que foi campeão </button>
+   </div>
+  </fieldset>
+ </form> 
+</body>
+</html>

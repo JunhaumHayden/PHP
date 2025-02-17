@@ -1,0 +1,80 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PHP</title>
+        <link rel="stylesheet" href="/PHP/assets/css/style.css">
+        <link rel="shortcut icon" type="imagex/png" href="/web/icons/icon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200;1,400&family=Red+Hat+Display:wght@400;500;700&family=Roboto&display=swap"
+    rel="stylesheet">
+
+        
+    </head>
+    <body>
+        <header>
+            <h2>🌐 PHP WebCode Development Wonderland 🐘</h2>
+            <h3 id="idcabelho">  Prática com PHP em Subrotinas - Lista07 <br>Exercicio 04
+            </h3> 
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/PHP/index.html">Voltar</a></li>
+            </ul>
+        </nav>
+
+        <form method="post" action="recebe-dados.php">
+            <fieldset>
+                <legend> 
+                    Escolha o tipo de media em PHP
+                </legend>
+                 
+                    <label class="alinha"> Nome do aluno: </label>
+                    <input type="text" name="aluno" autofocus> <br>
+                 
+                    <label class="alinha"> Nota 1: </label>
+                    <input type="number" min="0" max="10" step=".1" name="nota01"> <br>
+                    <label class = 'alinha'>Peso da Nota 01:</label>
+                    <input type = 'number' name="peso01" min="0" step="1" > <br>
+
+                    <label class="alinha"> Nota 2: </label>
+                    <input type="number" min="0" max="10" step=".1" name="nota02"> <br>
+                    <label class = 'alinha'>Peso da Nota 02:</label>
+                    <input type = 'number' name="peso02" min="0" step="1" > <br>
+                 
+                    <label class="alinha"> Nota 03: </label>
+                    <input type="number" min="0" max="10" step=".1" name="nota03">
+                    <label class = 'alinha'>Peso da Nota 03:</label>
+                    <input type = 'number' name="peso03" min="0" step="1" > <br>
+
+                    <label>Escolha:</label><br>
+                    <input type="radio" id="media_A" name="media" value="sim" required>
+                    <label for="cartao_sim">Media Aritmetica</label><br>
+                    <input type="radio" id="media_P" name="media" value="nao">
+                    <label for="cartao_nao">Media Ponderada</label><br><br>
+                
+                
+                <button> --Executar-- </button>
+              
+            </fieldset>
+        </form>
+    </body>
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <img src="/assets/icons/icon36x36.ico" width="30" alt="Logo">
+            </div>
+            <div class="info">
+                <div>&copy; 2024 HTML / CSS / JavaScript</div>
+                <div>Desenvolvido por: Carlos Hayden Junior</div>
+            </div>
+            <div class="icons">
+                <img src="/assets/icons/icon-html5-48.png" width="20" alt="HTML Icon">
+                <img src="/assets/icons/icon-css3-48.ico" width="20" alt="CSS Icon">
+                <img src="/assets/icons/icons8-js-48.png" width="20" alt="JS Icon">
+            </div>
+        </div>
+    </footer> 
+    
+    </html>
