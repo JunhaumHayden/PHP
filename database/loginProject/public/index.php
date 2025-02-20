@@ -36,6 +36,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             header("Location: ../src/painel.php");
 
         } else {
+            echo "<script> alert('Falha ao logar! E-mail ou senha incorretos');";
             echo "Falha ao logar! E-mail ou senha incorretos";
         }
 
